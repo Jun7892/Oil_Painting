@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from ninja import NinjaAPI
 
 from nstapp.apis.v1.nst_router import router as nst_router
@@ -25,4 +25,5 @@ api.add_router("/nsts/", nst_router)
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/v1/", api.urls),
+    path('main/', include('main.urls')),
 ]
