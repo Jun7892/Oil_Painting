@@ -1,0 +1,1074 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #3e3b2a;
+    user-select: none;
+    position: relative;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(62,59,42,0);
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+html {
+    display: block;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+meta {
+    display: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #3e3b2a;
+    user-select: none;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3e3b2a;
+    text-align: left;
+    background-color: #fff;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+#__layout, #__nuxt {
+    width: 100%;
+    height: 100%;
+}
+
+main, main #mainView {
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+main {
+    font-family: "Primary";
+    text-transform: uppercase;
+    cursor: url("../img/default.7ee8dab.png") 2 6,default;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+#backdrop, #backdrop #backImageCarousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#backdrop #backImageMenu {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: calc(100% - 50px);
+    background-size: cover;
+    background: #3e3b2a url(../img/backgroundHome.b28a8b2.jpg) no-repeat bottom;
+}
+
+#backdrop #backImageCarousel {
+    background: url(../img/backgroundCarnival.4672858.jpg) 0 0 no-repeat;
+    background-size: auto 100%;
+}
+
+.graphicButton.dropShadow {
+    box-shadow: inset 0 4px 4px rgb(0 0 0 / 30%), 0 4px 4px rgb(0 0 0 / 30%);
+}
+
+.graphicButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #f9f7eb;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    transition: border-color .5s,background .5s;
+}
+
+main {
+    font-family: "Primary";
+    text-transform: uppercase;
+    cursor: url(../img/default.7ee8dab.png) 2 6,default;
+}
+
+.graphicButton .graphic {
+    transform: scale(1.001);
+    width: 100%;
+    height: 100%;
+    transition: transform .1s ease-out;
+    pointer-events: none;
+}
+
+svg {
+    overflow: hidden;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.graphicButton.dropShadow path {
+    filter: drop-shadow(0 3px 3px rgba(0,0,0,.5));
+}
+
+.graphicButton path {
+    fill: #f9f7eb;
+    transition: fill .5s;
+}
+
+.graphicButton.dropShadow {
+    box-shadow: inset 0 4px 4px rgb(0 0 0 / 30%), 0 4px 4px rgb(0 0 0 / 30%);
+}
+
+.graphicButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #f9f7eb;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    transition: border-color .5s,background .5s;
+}
+
+.audioButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #f9f7eb;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    box-shadow: inset 0 4px 4px rgb(0 0 0 / 30%), 0 4px 4px rgb(0 0 0 / 30%);
+}
+
+.audioButton .graphic {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.audioButton svg {
+    filter: drop-shadow(0 3px 3px rgba(0,0,0,.5));
+}
+
+.audioButton .speaker {
+    fill: #f9f7eb;
+}
+
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+
+.audioButton .line {
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke: #f9f7eb;
+}
+
+main #mainView {
+    height: 100%;
+}
+
+#menuScreen {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: calc(100% - 50px);
+    font-family: "CupheadVogue";
+    font-weight: 800;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+#menuScreen #menuCenter {
+    width: 664px;
+    height: 342px;
+    position: relative;
+    bottom: 100px;
+    pointer-events: auto;
+}
+
+#menuScreen #menuCuphead {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    width: 160px;
+    height: 210px;
+    background: url(../img/cuphead.84e47a6.png) 50%/100% auto no-repeat;
+}
+
+#menuScreen #menuCuphead #menuCupBubble {
+    width: 510px;
+    height: 170px;
+    position: absolute;
+    top: -170px;
+    left: 0;
+    background: url(../img/bubbleSpeech.3534394.png) 50%/100% auto no-repeat;
+    transform-origin: 15% 100%;
+}
+
+#menuScreen #menuCuphead #menuLink1 {
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    width: 100%;
+    height: 90px;
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 26px;
+    transition: transform .2s ease-out;
+}
+
+#menuScreen #menuMugman {
+    position: absolute;
+    top: 125px;
+    right: 0;
+    width: 222px;
+    height: 326px;
+    background: url(../img/mugman.984aff6.png) 50%/100% auto no-repeat;
+}
+
+#menuScreen #menuMugman #menuMugBubble {
+    position: absolute;
+    top: -60px;
+    right: 90%;
+    width: 168px;
+    height: 119px;
+    background: url(../img/bubbleThought2.953bf19.png) 50%/100% auto no-repeat;
+    text-align: center;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    -webkit-animation: cloudFloat 2s ease-in-out infinite alternate;
+    animation: cloudFloat 2s ease-in-out infinite alternate;
+}
+
+#menuScreen #menuCenter {
+    width: 664px;
+    height: 342px;
+    position: relative;
+    bottom: 100px;
+    pointer-events: auto;
+}
+
+#menuScreen {
+    width: 100%;
+    /*height: 100%;*/
+    position: absolute;
+    top: 0;
+    height: calc(100% - 50px);
+    font-family: "CupheadVogue", serif;
+    font-weight: 800;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+#menuScreen #menuMugman #menuMugBubble #menuLink2 {
+    padding-top: 36px;
+    transition: transform .2s ease-out;
+    transform: scale(1);
+    pointer-events: none;
+}
+
+#menuScreen #menuMugman #menuMugBubble {
+    position: absolute;
+    top: -60px;
+    right: 90%;
+    width: 168px;
+    height: 119px;
+    background: url(../img/bubbleThought2.953bf19.png) 50%/100% auto no-repeat;
+    text-align: center;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    animation: cloudFloat 2s ease-in-out infinite alternate;
+}
+
+#menuScreen #menuMugman .txtLg {
+    font-size: 1.8em;
+    line-height: 1em;
+}
+
+#menuScreen #menuMugman .txtSm {
+    font-size: 1.06em;
+    line-height: 1em;
+}
+
+#menuScreen #menuMugman #menuMugBubbleSM {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    background: url(../img/bubbleThought1.6e8107a.png) 50%/100% auto no-repeat;
+    -webkit-animation: cloudFloat 2.73s ease-in-out infinite alternate;
+    animation: cloudFloat 2.73s ease-in-out infinite alternate;
+}
+
+@media (min-width: 744px){
+#tutorialCloud {
+    left: 50%;
+    margin-left: -416px;
+    width: 833px;
+    height: 500px;
+    background-size: 100% auto;
+    transform: translateY(-100%) scale(.5);
+}
+}
+
+
+
+#tutorialCloud {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    background: url(../img/bubbleThought3.656c95f.png) bottom/auto 100% no-repeat;
+    transform: translateY(-100%) scale(1);
+    pointer-events: auto;
+}
+
+@media (min-width: 744px){
+#tutorialCloud .closeBtn {
+    top: 20px;
+    left: 40px;
+}
+}
+
+
+
+#tutorialCloud .closeBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.graphicButton.colorBlack {
+    border-color: #3e3b2a;
+}
+
+.graphicButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #f9f7eb;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    transition: border-color .5s,background .5s;
+}
+
+.graphicButton .graphic {
+    transform: scale(1.001);
+    width: 100%;
+    height: 100%;
+    transition: transform .1s ease-out;
+    pointer-events: none;
+}
+
+svg {
+    overflow: hidden;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+#tutorialBox {
+    max-width: 400px;
+    height: 92%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tutorialBox .stepNo, #tutorialBox .stepTitle {
+    /*-webkit-mask-image: linear-gradient(90deg,#000 99%,transparent);*/
+    mask-image: linear-gradient(90deg,#000 99%,transparent);
+}
+
+#tutorialBox .stepNo {
+    opacity: .5;
+    font-weight: 700;
+}
+
+@media (min-width: 744px){
+#tutorialBox .stepTitle {
+    font-size: 3.4em;
+}
+}
+
+#tutorialBox .stepTitle {
+    font-family: "Primary";
+    font-size: 2.4em;
+}
+
+#tutorialBox .stepNo, #tutorialBox .stepTitle {
+    /*-webkit-mask-image: linear-gradient(90deg,#000 99%,transparent);*/
+    mask-image: linear-gradient(90deg,#000 99%,transparent);
+}
+
+#tutorialBox .stepDesc {
+    text-transform: none;
+    font-weight: 700;
+    opacity: .5;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 744px){
+#tutorialBox .stepImageBox {
+    padding-top: 45%;
+}
+}
+
+#tutorialBox .stepImageBox {
+    width: 100%;
+    padding-top: 35%;
+    position: relative;
+}
+
+#tutorialBox .stepImageBox .stepImage.image1 {
+    background-image: url(../img/tutorial1.ffef5ea.png);
+    transform: scale(.5) translateX(-50%);
+}
+
+#tutorialBox .stepImageBox .stepImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: 50%/contain no-repeat;
+    transition: transform .5s ease-out,opacity .25s linear;
+    opacity: 0;
+}
+
+#tutorialBox .stepImageBox .stepImage.image2 {
+    background-image: url(../img/tutorial2.61cd0b1.png);
+    transform: scale(.5) translateX(0);
+}
+
+#tutorialBox .stepImageBox .stepImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: 50%/contain no-repeat;
+    transition: transform .5s ease-out,opacity .25s linear;
+    opacity: 0;
+}
+
+#tutorialBox .stepImageBox.step1 .image1, #tutorialBox .stepImageBox.step2 .image2, #tutorialBox .stepImageBox.step3 .image3 {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+}
+
+#tutorialBox .stepImageBox .stepImage.image3 {
+    background-image: url(../img/lockbox.aa1a4bc.png);
+    transform: scale(.5) translateX(50%);
+}
+
+#tutorialBox .stepImageBox .stepImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: 50%/contain no-repeat;
+    transition: transform .5s ease-out,opacity .25s linear;
+    opacity: 0;
+}
+
+#tutorialBox .pagination {
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+}
+
+#tutorialBox .stepTap {
+    opacity: .5;
+}
+
+#tutorialBox .pagination .pagDot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 10px;
+    background-color: #3e3b2a;
+    opacity: .5;
+    border-radius: 50%;
+    transition: opacity .3s;
+}
+
+main #carouselOuter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#chapterCarousel {
+    width: 100%;
+    height: 345px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.chapterCard {
+    width: 262px;
+    height: 345px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -131px;
+    padding: 15px;
+    background: url(../img/chapterCard.5183c6b.png) 50%/contain no-repeat;
+    user-select: none;
+  }
+
+.chapterCard .chapterNumber {
+    width: 100%;
+    height: 45px;
+    padding-top: 15px;
+    margin-top: 5%;
+    font-size: 1.5em;
+    text-align: center;
+    background: url(../img/taskListChapter.e76bb33.png) 50%/auto 100% no-repeat;
+    color: #3e3b2a;
+}
+
+.chapterNumber {
+    width: 100%;
+    height: 45px;
+    padding-top: 15px;
+    margin-top: 5%;
+    font-size: 1.5em;
+    text-align: center;
+    background: url(../img/taskListChapter.e76bb33.png) 50%/auto 100% no-repeat;
+    color: #3e3b2a;
+}
+
+.chapterCard .chapterNumber {
+    width: 100%;
+    height: 45px;
+    padding-top: 15px;
+    margin-top: 5%;
+    font-size: 1.5em;
+    text-align: center;
+    background: url(../img/taskListChapter.e76bb33.png) 50%/auto 100% no-repeat;
+    color: #3e3b2a;
+}
+
+.chapterNumber {
+    width: 100%;
+    height: 45px;
+    padding-top: 15px;
+    margin-top: 5%;
+    font-size: 1.5em;
+    text-align: center;
+    background: url(../img/taskListChapter.e76bb33.png) 50%/auto 100% no-repeat;
+    color: #3e3b2a;
+}
+
+.chapterHeader {
+    width: 100%;
+    margin: 10px 0 0;
+    text-align: center;
+    color: #3e3b2a;
+    position: relative;
+}
+
+.chapterHeader .line1 {
+    font-size: 1.25em;
+    line-height: 1em;
+    letter-spacing: .05em;
+}
+
+.chapterHeader .line2 {
+    font-family: "Titania";
+    font-size: 2.1em;
+    line-height: 1em;
+}
+
+.chapterHeader .line2 {
+    font-family: "Titania";
+    font-size: 2.1em;
+    line-height: 1em;
+}
+
+.chapterCartoon {
+    width: 100%;
+    margin: 0 auto;
+    height: 60%;
+    position: relative;
+}
+
+.chapterCartoon .character {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    background: 50%/contain no-repeat;
+    position: relative;
+    z-index: 2;
+    transition: filter 1s;
+}
+
+.chapterCard .chapterNumber {
+    width: 100%;
+    height: 45px;
+    padding-top: 15px;
+    margin-top: 5%;
+    font-size: 1.5em;
+    text-align: center;
+    background: url(../img/taskListChapter.e76bb33.png) 50%/auto 100% no-repeat;
+    color: #3e3b2a;
+}
+
+.chapterCartoon .character {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    background: 50%/contain no-repeat;
+    position: relative;
+    z-index: 2;
+    transition: filter 1s;
+}
+
+#chapterCarousel #hitspot {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 110%;
+}
+
+#chapterCarousel .openBannerOuter {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-Left: -131px;
+    width: 262px;
+    height: 20%;
+    transition: transform .3s ease-out;
+}
+
+@media (min-height: 750px){
+    main .ctaExplore {
+    font-size: 36px;
+    line-height: 1em;
+}
+}
+
+main .ctaExplore {
+    width: 100%;
+    pointer-events: none;
+    position: relative;
+    transform: translateY(150%);
+    font-family: "Primary", serif;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 1.5em;
+    text-align: center;
+    color: #f9f7eb;
+    text-shadow: -1.5px -1.5px 0 #2e2b1a, 0 -1.5px 0 #2e2b1a, 1.5px -1.5px 0 #2e2b1a, 1.5px 0 0 #2e2b1a, 1.5px 1.5px 0 #2e2b1a, 0 1.5px 0 #2e2b1a, -1.5px 1.5px 0 #2e2b1a, -1.5px 0 0 #2e2b1a, 2.5px 3px 3px #2e2b1a;
+}
+
+@media (min-width: 600px){
+    #bottomEarth {
+    background-size: auto 100%;
+}
+}
+
+#bottomEarth {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: url(/_nuxt/img/earth.ae89ec7.png) top/auto 120% repeat;
+    pointer-events: none;
+}
+
+#messageModule {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: visibility 1s,background-color 1s;
+    visibility: hidden;
+    pointer-events: auto;
+}
+
+@media (min-width: 600px){
+    #messageCard {
+    background-size: 100% auto;
+    height: 750px;
+    left: 50%;
+    margin-left: -300px;
+}
+}
+
+#messageCard {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    background: url(/_nuxt/img/messageCard.5324408.png) top/100% 100% no-repeat;
+    overflow: hidden;
+    transform: translateY(100%);
+}
+
+@media (min-width: 600px){
+    #messageCard .column {
+    padding: 30px 60px 140px;
+}
+}
+
+#messageCard .column {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding: 30px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+#messageCard .preTitle {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1em;
+    opacity: .5;
+    transition: transform 1s ease-in-out .1s;
+}
+
+#messageCard .preTitle, #messageCard .title {
+    transform: translateY(100vh);
+}
+
+@media (min-width: 600px){
+    #messageCard .title {
+    font-size: 3em;
+}
+}
+
+#messageCard .title {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1em;
+    transition: transform 1.1s ease-in-out .1s;
+}
+
+.txt-red {
+    color: #ca4740;
+}
+
+#messageCard .imgButtonBox {
+    text-align: center;
+}
+
+@media (min-width: 600px){
+#messageCard .image.img1 {
+    width: 450px;
+    height: 330px;
+}
+}
+
+#messageCard .image.img1 {
+    width: 336px;
+    height: 260px;
+    background-image: url(../img/cupheadJump.6fb4db5.png);
+}
+
+#messageCard .image {
+    transform: translateY(100vh);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto 0;
+    transition: transform 1.2s ease-in-out .1s,background-size .5s ease-in-out 0s;
+}
+
+#messageCard .handyButton {
+    transition: transform 1.2s ease-in-out .1s;
+    transform: translateY(100vh);
+}
+
+.handyButton.dropShadow {
+    box-shadow: 0 4px 4px rgb(0 0 0 / 30%);
+}
+
+.handyButton {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0 15px;
+    height: 40px;
+    border: 1px solid #3e3b2a;
+    background: #f9f7eb;
+    color: #3e3b2a;
+    letter-spacing: .04em;
+    text-align: center;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    overflow: hidden;
+    user-select: none;
+}
+
+.handyButton .textBox {
+    display: inline-block;
+    transition: transform .3s ease-out;
+    pointer-events: none;
+}
+
+.handyButton .textSlot {
+    line-height: 1.5em;
+    font-size: 1.5em;
+    padding-top: 3px;
+}
+
+.handyButton .hand {
+    width: 30px;
+    height: 90%;
+    display: inline-block;
+    vertical-align: top;
+    background: url(../img/fingerPoint.f7ceaca.png) 50%/100% auto no-repeat;
+    transition: transform .1s ease-out .1s;
+    pointer-events: none;
+}
+
+@media (min-width: 600px){
+#messageCard .column {
+    padding: 30px 60px 140px;
+}
+}
+
+#messageCard .column {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding: 30px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+#messageCard .preTitle {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1em;
+    opacity: .5;
+    transition: transform 1s ease-in-out .1s;
+}
+
+#messageCard .preTitle, #messageCard .title {
+    transform: translateY(100vh);
+}
+
+
+@media (min-width: 600px)
+{
+#messageCard .title {
+    font-size: 3em;
+}
+}
+
+#messageCard .title {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1em;
+    transition: transform 1.1s ease-in-out .1s;
+}
+
+#messageCard .imgButtonBox {
+    text-align: center;
+}
+
+@media (min-width: 600px){
+  #messageCard .image.img2 {
+    width: 500px;
+    height: 330px;
+}
+}
+
+#messageCard .image.img2 {
+    width: 336px;
+    height: 224px;
+    background-image: url(../img/devilLaugh.7257975.png);
+}
+
+#messageCard .image {
+    transform: translateY(100vh);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto 0;
+    transition: transform 1.2s ease-in-out .1s,background-size .5s ease-in-out 0s;
+}
+
+#messageCard .handyButton {
+    transition: transform 1.2s ease-in-out .1s;
+    transform: translateY(100vh);
+}
+
+.handyButton.dropShadow {
+    box-shadow: 0 4px 4px rgb(0 0 0 / 30%);
+}
+
+.handyButton {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0 15px;
+    height: 40px;
+    border: 1px solid #3e3b2a;
+    background: #f9f7eb;
+    color: #3e3b2a;
+    letter-spacing: .04em;
+    text-align: center;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.handyButton .textBox {
+    display: inline-block;
+    transition: transform .3s ease-out;
+    pointer-events: none;
+}
+
+.handyButton .textSlot {
+    line-height: 1.5em;
+    font-size: 1.5em;
+    padding-top: 3px;
+}
+
+.handyButton .hand {
+    width: 30px;
+    height: 90%;
+    display: inline-block;
+    vertical-align: top;
+    background: url(../img/fingerPoint.f7ceaca.png) 50%/100% auto no-repeat;
+    transition: transform .1s ease-out .1s;
+    pointer-events: none;
+}
+
+#fireBar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    display: flex;
+    transform: translateY(110%);
+    visibility: hidden;
+    transition: transform 3s linear,visibility 3s;
+}
+
+#fireBar .fireUnit.unit1 {
+    left: -2%;
+}
+
+#fireBar .fireUnit {
+    width: 37%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: url(../img/fire.41d58d5.png) top/auto 598px;
+    background-repeat: repeat-x;
+    /*-webkit-mask-image: linear-gradient(90deg,transparent 0,#fff 5%,#fff 95%,transparent);*/
+    mask-image: linear-gradient(90deg,transparent 0,#fff 5%,#fff 95%,transparent);
+}
+
+#fireBar .fireUnit.unit2 {
+    left: 31%;
+}
+
+#fireBar .fireUnit {
+    width: 37%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: url(../img/fire.41d58d5.png) top/auto 598px;
+    background-repeat: repeat-x;
+    /*-webkit-mask-image: linear-gradient(90deg,transparent 0,#fff 5%,#fff 95%,transparent);*/
+    mask-image: linear-gradient(90deg,transparent 0,#fff 5%,#fff 95%,transparent);
+}
+
+#fireBar .fireUnit.unit3 {
+    right: -2%;
+}
+
+#fireBar .fireUnit {
+    width: 37%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: url(../img/fire.41d58d5.png) top/auto 598px;
+    background-repeat: repeat-x;
+    /*-webkit-mask-image: linear-gradient(90deg,transparent 0,#fff 5%,#fff 95%,transparent);*/
+    mask-image: linear-gradient(90deg,transparent 0,#fff 5%,#fff 95%,transparent);
+}
+
+@media (min-width: 600px){
+#soulCounter {
+    transform: scale(1);
+}
+}
+
+#soulCounter {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -138px;
+    pointer-events: auto;
+    width: 275px;
+    height: 120px;
+    padding: 36px 23px 43px;
+    transform: scale(.7);
+    transform-origin: center bottom;
+}
+
+#soulCounter .ghost.ghostLeft {
+  left: 25px;
+}
+
+#soulCounter .ghost {
+  width: 31px;
+  height: 41px;
+  position: absolute;
+  top: 40px;
+  background: url(../img/soulGhost.8e7bd91.png) 50%/100% auto no-repeat
+}
