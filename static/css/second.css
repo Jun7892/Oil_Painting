@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.bgimg {
+    border: 0;
+    padding: 0;
+    background-image: url('../img/backgroundHome.b28a8b2.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.logoimg {
+    width: 3vw;
+    height: 3vw;
+    display: inline;
+}
+
+.litimg {
+    padding-left: 25vw;
+    position: relative;
+}
+
+.cuphead {
+    padding-left: 20vw;
+}
+
+.secondline {
+    display: inline;
+}
+
+/*.thirdline {*/
+/*    position: relative;*/
+/*}*/
+
+.litimg_p {
+    position: absolute;
+    top: -18%;
+    left: 28%;
+    font-weight: bolder;
+    font-size: 3vw;
+}
+
+.bubble {
+    position: absolute;
+    left: 54%;
+    top: 40%;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
