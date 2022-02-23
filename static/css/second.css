@@ -51,3 +51,14 @@ body, html {
     font-weight: bold;
     font-size: 1.5vw;
 }
+
+/*.plocation {*/
+/*    position: absolute;*/
+/*    top: 86%;*/
+/*}*/
+
+.bottomvar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
