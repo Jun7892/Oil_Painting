@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
 }
+
 .bgimg {
     border: 0;
     padding: 0;
@@ -62,3 +63,52 @@ body, html {
     bottom: 0;
     width: 100%;
 }
+
+/*.modalcontainer {*/
+
+/*}*/
+
+
+/*modal*/
+
+
+
+/*.tutorialCloud {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    height: 400px;*/
+/*    background: url(../img/bubbleThought3.656c95f.png);*/
+    /*transform: translateY(-100%) scale(1);*/
+    /*pointer-events: auto*/
+/*}*/
+
+/*#tutorialCloud .closeBtn {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    left: 10px*/
+/*}*/
+
+/*@media (min-width: 744px) {*/
+/*    #tutorialBox .stepTitle {*/
+/*        font-size: 3.4em*/
+/*    }*/
+
+/*    #tutorialBox .stepImageBox {*/
+/*        padding-top: 45%*/
+/*    }*/
+
+/*    #tutorialCloud {*/
+/*        left: 50%;*/
+/*        margin-left: -416px;*/
+/*        width: 833px;*/
+/*        height: 500px;*/
+/*        background-size: 100% auto;*/
+/*        transform: translateY(-100%) scale(.5)*/
+/*    }*/
+
+/*    #tutorialCloud .closeBtn {*/
+/*        top: 20px;*/
+/*        left: 40px*/
+/*    }*/
+/*}*/
