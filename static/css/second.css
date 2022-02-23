@@ -72,15 +72,14 @@ body, html {
 /*modal*/
 
 
-
 /*.tutorialCloud {*/
 /*    position: absolute;*/
 /*    top: 0;*/
 /*    width: 100%;*/
 /*    height: 400px;*/
 /*    background: url(../img/bubbleThought3.656c95f.png);*/
-    /*transform: translateY(-100%) scale(1);*/
-    /*pointer-events: auto*/
+/*transform: translateY(-100%) scale(1);*/
+/*pointer-events: auto*/
 /*}*/
 
 /*#tutorialCloud .closeBtn {*/
@@ -112,3 +111,27 @@ body, html {
 /*        left: 40px*/
 /*    }*/
 /*}*/
+
+/*groom 두둥실*/
+
+.groom {
+    animation: cloudFloat 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes cloudFloat {
+    0% {
+        transform: translateY(-5px)
+    }
+    to {
+        transform: translateY(5px)
+    }
+}
+
+@keyframes cloudFloat {
+    0% {
+        transform: translateY(-5px)
+    }
+    to {
+        transform: translateY(5px)
+    }
+}
