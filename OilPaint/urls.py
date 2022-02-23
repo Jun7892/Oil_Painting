@@ -27,4 +27,5 @@ urlpatterns = [
     path("api/v1/", api.urls),
     path('main/', include('main.urls')),
     path('second/', include('second.urls')),
+    path('first/', include('first.urls')),
 ]

@@ -1,146 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/css/first.css">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-<div class="Logo"></div>
+{% block others %}
+    <link rel="stylesheet" href="{% static 'css/first.css' %}">
+    <script defer src="{% static 'js/first.js' %}"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+{% endblock %}
 
-<!--<div id="introLoadingPage" class="">
+{% block title %}first{% endblock %}
+
+{% block content %}
+
+<div id="introLoadingPage" class="">
     <div class="Logo"></div>
     <div class="loadCounter">
         <div class="counterFrame"></div>
         <div class="drums">
             <div class="soulCounterDrum" style="transform: translate(0px, 0%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
             <div class="soulCounterDrum" style="transform: translate(0px, 0%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
             <div class="soulCounterDrum" style="transform: translate(0px, -100%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
             <div class="soulCounterDrum" style="transform: translate(0px, -700%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
             <div class="soulCounterDrum" style="transform: translate(0px, -800%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
             <div class="soulCounterDrum" style="transform: translate(0px, -400%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
             <div class="soulCounterDrum" style="transform: translate(0px, -100%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
             <div class="soulCounterDrum" style="transform: translate(0px, -300%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
             <div class="soulCounterDrum" style="transform: translate(0px, 0%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
             <div class="soulCounterDrum" style="transform: translate(0px, 0%);">
                 <div class="unitValue">0</div>
-                <div class="unitValue">1</div>
-                <div class="unitValue">2</div>
-                <div class="unitValue">3</div>
-                <div class="unitValue">4</div>
-                <div class="unitValue">5</div>
-                <div class="unitValue">6</div>
-                <div class="unitValue">7</div>
-                <div class="unitValue">8</div>
-                <div class="unitValue">9</div>
+
             </div>
         </div>
     </div>
     <div class="handyButton btn_loader_continue dropShadow">
-        <div class="textBox">
-            <div class="textSlot">CONTINUE</div>
-            <div class="textSlot">CONTINUE</div>
-        </div>
+
+        <a aria-label='Thanks' class='h-button centered' data-text='CONTINUE' href='#'>
+            <span>C</span>
+            <span>O</span>
+            <span>N</span>
+            <span>T</span>
+            <span>I</span>
+            <span>N</span>
+            <span>U</span>
+            <span>E</span>
+        </a>
+
         <div class="hand"></div>
     </div>
     <div class="audioText">
@@ -149,6 +80,5 @@
                   class="speakerPath"></path>
         </svg>
         <span>Turn up the volume for the best experience</span></div>
-</div> -->
-</body>
-</html>
+</div>
+{% endblock %}
