@@ -1,10 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    {% block others %}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
 </head>
-<body>
+<div id="container">
 
+</div>
+<body>
+{% block content %}
+
+{% endblock %}
 </body>
 </html>
