@@ -1,54 +1,44 @@
-$num = $('.my-card').length;
-$even = $num / 2;
-$odd = ($num + 1) / 2;
+function shiftLeft() {
+    const boxes = document.querySelectorAll(".box");
+    const tmpNode = boxes[0];
+    boxes[0].className = "box move-out-from-left";
 
-if ($num % 2 == 0) {
-  $('.my-card:nth-child(' + $even + ')').addClass('active');
-  $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
-  $('.my-card:nth-child(' + $even + ')').next().addClass('next');
-} else {
-  $('.my-card:nth-child(' + $odd + ')').addClass('active');
-  $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
-  $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
+    setTimeout(function() {
+        if (boxes.length > 5) {
+            tmpNode.classList.add("box--hide");
+            boxes[5].className = "box move-to-position5-from-left";
+        }
+        boxes[1].className = "box move-to-position1-from-left";
+        boxes[2].className = "box move-to-position2-from-left";
+        boxes[3].className = "box move-to-position3-from-left";
+        boxes[4].className = "box move-to-position4-from-left";
+        boxes[0].remove();
+
+        document.querySelector(".cards__container").appendChild(tmpNode);
+
+    }, 500);
+
 }
 
-$('.my-card').click(function() {
-  $slide = $('.active').width();
-  console.log($('.active').position().left);
+function shiftRight() {
+    const boxes = document.querySelectorAll(".box");
+    boxes[4].className = "box move-out-from-right";
+    setTimeout(function() {
+        const noOfCards = boxes.length;
+        if (noOfCards > 4) {
+            boxes[4].className = "box box--hide";
+        }
 
-  if ($(this).hasClass('next')) {
-    $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
-  } else if ($(this).hasClass('prev')) {
-    $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
-  }
+        const tmpNode = boxes[noOfCards - 1];
+        tmpNode.classList.remove("box--hide");
+        boxes[noOfCards - 1].remove();
+        let parentObj = document.querySelector(".cards__container");
+        parentObj.insertBefore(tmpNode, parentObj.firstChild);
+        tmpNode.className = "box move-to-position1-from-right";
+        boxes[0].className = "box move-to-position2-from-right";
+        boxes[1].className = "box move-to-position3-from-right";
+        boxes[2].className = "box move-to-position4-from-right";
+        boxes[3].className = "box move-to-position5-from-right";
+    }, 500);
 
-  $(this).removeClass('prev next');
-  $(this).siblings().removeClass('prev active next');
-
-  $(this).addClass('active');
-  $(this).prev().addClass('prev');
-  $(this).next().addClass('next');
-});
-
-
-// Keyboard nav
-$('html body').keydown(function(e) {
-  if (e.keyCode == 37) { // left
-    $('.active').prev().trigger('click');
-  }
-  else if (e.keyCode == 39) { // right
-    $('.active').next().trigger('click');
-  }
-});
-
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+}
