@@ -1,44 +1,112 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../static/css/second.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/second.css" rel="stylesheet" type="text/css"/>
+    <script>var sound = "{% static "sounds/sound1.mp3" %}"</script>
+    <script>var sound1 = "{% static "sounds/sound2.mp3" %}"</script>
+    <script>var sound2 = "{% static "sounds/sound3.mp3" %}"</script>
+    <script>var sound3 = "{% static "sounds/bgm.mp3" %}"</script>
+    <script type="text/javascript" src="../static/js/second.js"></script>
     <title>second_page</title>
 </head>
 <body>
-    <div class="bgimg">
-        <div class="logoimg">
-            <img src="../static/img/film-2-64.png" style="padding-left: 5vw; padding-right: 32vw; width: 3vw;" onclick="">
-            <img src="../static/img/logoMain.a263c77.png" style="padding-right: 32vw; width: 20vw;">
-            <img src="../static/img/speaker-64.png" style="width: 3vw;" onclick="">
+<div class="bgimg">
+    <div id="modal">
+        <img src="../static/img/bubbleThought3.656c95f.png" style="position: absolute; top: 0%; left: 25%; z-index: 2;">
+        <img src="../static/img/devilLaugh.7257975.png" style="position: absolute; top: 10%; left: 25%; z-index: 2; opacity: 0.3;">
+        <img src="../static/img/char2-sad.a575e28.png" style=" width: 10vw; position: absolute; top: 10%; left: 67%; z-index: 2; opacity: 0.5;">
+        <img src="../static/img/x-mark-4-64.png" onclick="modalOff()" style="position: absolute; top: 2%; left: 28%; z-index: 2; background-color: lightgrey; border-radius: 50%;">
+        <p style="position: absolute; top: 0%; left: 50%; z-index: 3; color: gray;">member</p>
+        <p style="position: absolute; top: 1%; left: 43%; z-index: 3; font-size: 5vw; font-weight: bolder">17Team</p>
+        <div style="position: absolute; top: 35%; left: 30%; z-index: 3">
+            <p style="font-size: 1vw; font-weight: bold;">&nbsp&nbsp&nbsp김지용</p>
+            <p style="font-size: 1vw; font-weight: bold;">매맞는 남친</p>
         </div>
-        <div class="litimg">
-            <img src="../static/img/bubbleSpeech.3534394.png" style="width: 30vw;">
-            <p class="litimg_p">윤소현 나양!</p>
+        <div style="position: absolute; top: 35%; left: 40%; z-index: 3">
+            <p style="font-size: 1vw; font-weight: bold;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp이성오</p>
+            <p style="font-size: 1vw; font-weight: bold;">옥토퍼스 5다리</p>
         </div>
-        <div class="secondline">
-            <div class="cuphead">
-                <img src="../static/img/cuphead.84e47a6.png" style="width: 15vw;">
-                <img src="../static/img/bubbleThought2.953bf19.png" style="width: 15vw; padding-left: 15vw; position: relative; bottom: 15vw;">
-                <img src="../static/img/bubbleThought1.6e8107a.png" style="width: 3vw; position: relative; bottom: 15vw;">
-                <img src="../static/img/mugman.984aff6.png" style="width: 15vw;">
-                <p class="bubble">머라는거야...</p>
-            </div>
+        <div style="position: absolute; top: 35%; left: 50%; z-index: 3">
+            <p style="font-size: 1vw; font-weight: bold;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp김석준</p>
+            <p style="font-size: 1vw; font-weight: bold;">&nbsp &nbsp &nbsp &nbsp 평범</p>
         </div>
-        <div class="thirdline">
-            <img src="../static/img/soulCounter.2c16a68.png" style="width: 20vw; padding-left: 40vw; position: relative; bottom: 3vw;">
-{#            <p style="position: ">0</p>#}
-{#            <p>0</p>#}
-{#            <p>0</p>#}
-{#            <p>0</p>#}
-{#            <p>0</p>#}
-{#            <p>0</p>#}
-{#            <p>0</p>#}
-{#            <p>0</p>#}
-{#            <p>0</p>#}
-{#            <p>0</p>#}
+        <div style="position: absolute; top: 35%; left: 60%; z-index: 3">
+            <p style="font-size: 1.5vw; font-weight: bold; color: deeppink;">&nbsp&nbsp&nbsp&nbsp귀요미윤소현</p>
+            <p style="font-size: 1vw; font-weight: bold; color: deeppink;">최강미모, 깜찍뽀짝, 뽀짝깜찍</p>
+            <p style="font-size: 1vw; font-weight: bold; color: deeppink;">게더애교원탑, 자칭캠프외모1위</p>
         </div>
     </div>
+
+    <div class="logoimg">
+        <img src="../static/img/film-2-64.png" style="padding-left: 5vw; padding-right: 32vw; width: 3vw;"
+             onclick="location.href='https://www.youtube.com/embed/Sel3fjl6uyo?autoplay=1&controls=0';">
+        <img src="../static/img/logoMain.a263c77.png" style="padding-right: 32vw; width: 20vw;">
+        <img src="../static/img/speaker-64.png" style="width: 3vw;" onclick="charm3(sound3)">
+    </div>
+    <div class="litimg groom">
+        <img src="../static/img/bubbleSpeech.3534394.png" style="width: 30vw;">
+        <p class="litimg_p groom" onclick="location.href='main'">기요미는 나양!</p>
+    </div>
+    <div class="secondline">
+        <div class="cuphead">
+            <img src="../static/img/cuphead.84e47a6.png" style="width: 15vw;" onclick="charm(sound)">
+            <img src="../static/img/bubbleThought2.953bf19.png"
+                 style="width: 15vw; padding-left: 15vw; position: relative; bottom: 15vw;" class="groom">
+            <img src="../static/img/bubbleThought1.6e8107a.png" style="width: 3vw; position: relative; bottom: 15vw;" class="groom" onclick="modalOn()">
+            <img src="../static/img/mugman.984aff6.png" style="width: 15vw;" id="btn2" onclick="charm2(sound2)">
+            <p class="bubble groom" onclick="charm1(sound1)">예뿌니도 나양!</p>
+            <p class="bubble groom" style="top: 45%;" onclick="charm2(sound2)">여치니도 나양!</p>
+        </div>
+    </div>
+    <div class="thirdline">
+        <img src="../static/img/soulCounter.2c16a68.png"
+             style="width: 20vw; padding-left: 40vw; position: relative; bottom: 3vw;">
+        <p style="position: absolute; top: 90%; left: 42.7%; font-weight: bold">0</p>
+        <p style="position: absolute; top: 90%; left: 44.35%; font-weight: bold">0</p>
+        <p style="position: absolute; top: 90%; left: 46%; font-weight: bold">0</p>
+        <p style="position: absolute; top: 90%; left: 47.7%; font-weight: bold">0</p>
+        <p style="position: absolute; top: 90%; left: 49.4%; font-weight: bold">0</p>
+        <p style="position: absolute; top: 90%; left: 51.1%; font-weight: bold">0</p>
+        <p style="position: absolute; top: 90%; left: 52.8%; font-weight: bold">0</p>
+        <p style="position: absolute; top: 90%; left: 54.45%; font-weight: bold">0</p>
+        <p style="position: absolute; top: 90%; left: 56.15%; font-weight: bold">0</p>
+        <p style="position: absolute; top: 90%; left: 57.8%; font-weight: bold">0</p>
+    </div>
+    <div class="">
+        <img src="../static/img/earth.ae89ec7.png" style="width: 100%;">
+    </div>
+</div>
 </body>
 </html>
+
+
+{#modal#}
+{#<div class="tutorialCloud" style="opacity: 1; transform: translate(0px, 0%);">#}
+{#    <div class="graphicButton closeBtn colorBlack">#}
+{#        <svg viewBox="-7 -7 34.6 33" class="graphic"><!----> <!----> <!---->#}
+{#            <path d="M17,4.2L15.6,2.8L10.3,8.1L5,2.8L3.6,4.2L8.9,9.5L3.6,14.8L5,16.2L10.3,10.9L15.6,16.2L17,14.8L11.7,9.5L17,4.2"></path>#}
+{#            <!----> <!----> <!----> <!----></svg>#}
+{#    </div>#}
+{#    <div id="tutorialBox">#}
+{#        <div class="stepNo" style="-webkit-mask-image: linear-gradient(black 99%, transparent 110%);">Step 1</div>#}
+{#        <div class="stepTitle" style="-webkit-mask-image: linear-gradient(black 99%, transparent 110%);">Save Souls!#}
+{#        </div>#}
+{#        <div class="stepDesc">Help free the lost souls snatched by the Devil! The more souls saved, the closer we get to#}
+{#            releasing The Cuphead Show!#}
+{#        </div>#}
+{#        <div class="stepImageBox step1">#}
+{#            <div class="stepImage image1"></div>#}
+{#            <div class="stepImage image2"></div>#}
+{#            <div class="stepImage image3"></div>#}
+{#        </div>#}
+{#        <div class="pagination">#}
+{#            <div class="stepTap">Tap to continue</div>#}
+{#            <div class="pagDot active"></div>#}
+{#            <div class="pagDot"></div>#}
+{#            <div class="pagDot"></div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}

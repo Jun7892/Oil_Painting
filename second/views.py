@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def second_view(request):
+    return render(request, 'second.html')
