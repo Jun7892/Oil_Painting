@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    cursor: url("/static/img/default.7ee8dab.png") 2 6,default;
 }
 
 .bgimg {
@@ -10,9 +11,10 @@ body, html {
     background-image: url('../img/backgroundHome.b28a8b2.jpg');
     min-height: 100%;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     z-index: -1;
 }
+
 
 .logoimg {
     width: 3vw;
@@ -33,16 +35,13 @@ body, html {
     display: inline;
 }
 
-/*.thirdline {*/
-/*    position: relative;*/
-/*}*/
 
 .litimg_p {
     position: absolute;
-    top: -18%;
+    top: -6%;
     left: 28%;
     font-weight: bolder;
-    font-size: 3vw;
+    font-size: 2.1vw;
 }
 
 .bubble {
@@ -134,4 +133,37 @@ body, html {
     to {
         transform: translateY(5px)
     }
+}
+
+#bottomEarth {
+    position: absolute;
+    bottom: -11%;
+    width: 100%;
+    height: 10%;
+    background: url(../img/earth.ae89ec7.png);
+    pointer-events: none;
+    z-index: 0;
+}
+
+@media (min-width: 600px){
+#bottomEarth {
+    background-size: 30% 100%;
+}
+}
+
+@font-face {
+    font-family: "CupheadVogue";
+    src: url("../fonts/CupheadVogue-ExtraBold.cbf05a8.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+
+p {
+    cursor: url("/static/img/pointer.ac1efb5.png") 2 2,pointer;
+  font-family: "CupheadVogue", sans-serif;
+  font-weight: 900;
+  color: #3e3b2a;
+  text-decoration: none;
 }
