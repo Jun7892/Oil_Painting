@@ -1064,3 +1064,7 @@ main .ctaExplore {
   top: 40px;
   background: url(../img/soulGhost.8e7bd91.png) 50%/100% auto no-repeat
 }
+
+main.cursorPress {
+    cursor: url(../img/press.1c07fcb.png) 2 2,pointer;
+}
