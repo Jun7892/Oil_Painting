@@ -15,6 +15,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    top: 80px;
 }
 
 .button {
@@ -64,11 +66,11 @@ body {
 }
 
 .box:nth-child(2) {
-  left: 5%;
+  left: -5%;
 }
 
 .box:nth-child(4) {
-  left: -5%;
+  left: 5%;
 }
 
 .box:nth-child(4n + 1) {
@@ -98,48 +100,48 @@ body {
 }
 
 .move-out-from-left {
-    animation: moveOutLeft 0.5s ease-in-out;
+    animation: moveOutLeft 0.3s ease-in-out;
 }
 
 .move-out-from-right {
-    animation: moveOutRight 0.5s ease-in-out;
+    animation: moveOutRight 0.3s ease-in-out;
 }
 
 .move-to-position5-from-left {
-    animation: moveToP5Left 0.5s ease-in-out;
+    animation: moveToP5Left 0.3s ease-in-out;
 }
 
 .move-to-position4-from-left {
-    animation: moveToP4Left 0.5s ease-in-out;
+    animation: moveToP4Left 0.3s ease-in-out;
 }
 
 .move-to-position3-from-left {
-    animation: moveToP3Left 0.5s ease-in-out;
+    animation: moveToP3Left 0.3s ease-in-out;
 }
 
 .move-to-position2-from-left {
-    animation: moveToP2Left 0.5s ease-in-out;
+    animation: moveToP2Left 0.3s ease-in-out;
 }
 
 
 .move-to-position1-from-left{
-    animation: moveToP1Left 0.5s ease-in-out;
+    animation: moveToP1Left 0.3s ease-in-out;
 }
 
 .move-to-position5-from-right{
-    animation: moveToP5Right 0.5s ease-in-out;
+    animation: moveToP5Right 0.3s ease-in-out;
 }
 .move-to-position4-from-right{
-    animation: moveToP4Right 0.5s ease-in-out;
+    animation: moveToP4Right 0.3s ease-in-out;
 }
 .move-to-position3-from-right{
-    animation: moveToP3Right 0.5s ease-in-out;
+    animation: moveToP3Right 0.3s ease-in-out;
 }
 .move-to-position2-from-right{
-    animation: moveToP2Right 0.5s ease-in-out;
+    animation: moveToP2Right 0.3s ease-in-out;
 }
 .move-to-position1-from-right{
-    animation: moveToP1Right 0.5s ease-in-out;
+    animation: moveToP1Right 0.3s ease-in-out;
 }
 
 @keyframes moveOutLeft {
@@ -416,7 +418,7 @@ body, html {
     top: 0;
     left: 51%;
     margin-left: 0px;
-    padding: 70px;
+    padding: 120px;
     background: url(../img/chapterCard.5183c6b.png) 50%/contain no-repeat;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -445,11 +447,190 @@ body, html {
         color: #3e3b2a
     }
 
-    .card-img {
+.card-img {
     position: relative;
     height: 150px;
     top: 90px;
 }
 
+.openBannerOuter {
+    position: absolute;
+    margin: 72px 828px;
+    width: 265px;
+    height: 10%;
+    transition: transform .3s ease-out;
+}
+
+.openBanner {
+    width: 100%;
+    height: 100%;
+    background: url(../img/openBanner.34973f1.png) top/100% 200% no-repeat;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    opacity: 1;
+    transition: transform .3s ease-out .3s,opacity .3s ease-out .3s;
+}
+
+.openBanner:hover:active {
+    cursor: url(../img/press.1c07fcb.png) 2 2,pointer;
+}
 
 
+/*카드 박스체크*/
+
+.card {
+  --background: #fff;
+  --background-checkbox: #0082ff;
+  --background-image: #fff, rgba(0, 107, 175, 0.2);
+  --text-color: #666;
+  --text-headline: #000;
+  --card-shadow: #0082ff;
+  --card-height: 190px;
+  --card-width: 190px;
+  --card-radius: 12px;
+  --header-height: 47px;
+  --blend-mode: overlay;
+  --transition: 0.15s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.card:nth-child(odd) .card__body-cover-image {
+  --x-y1: 100% 90%;
+  --x-y2: 67% 83%;
+  --x-y3: 33% 90%;
+  --x-y4: 0% 85%;
+}
+.card:nth-child(even) .card__body-cover-image {
+  --x-y1: 100% 85%;
+  --x-y2: 73% 93%;
+  --x-y3: 25% 85%;
+  --x-y4: 0% 90%;
+}
+.card__input {
+  position: absolute;
+  display: block;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+}
+.card__input:checked ~ .card__body {
+  --shadow: 0 0 0 3px var(--card-shadow);
+}
+.card__input:checked ~ .card__body .card__body-cover-checkbox {
+  --check-bg: var(--background-checkbox);
+  --check-border: #fff;
+  --check-scale: 1;
+  --check-opacity: 1;
+}
+.card__input:checked ~ .card__body .card__body-cover-checkbox--svg {
+  --stroke-color: #fff;
+  --stroke-dashoffset: 0;
+}
+.card__input:checked ~ .card__body .card__body-cover:after {
+  --opacity-bg: 0;
+}
+.card__input:checked ~ .card__body .card__body-cover-image {
+  --filter-bg: grayscale(0);
+}
+.card__input:disabled ~ .card__body {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.card__input:disabled ~ .card__body:active {
+  --scale: 1;
+}
+.card__body {
+  display: grid;
+  grid-auto-rows: calc(var(--card-height) - var(--header-height)) auto;
+  background: var(--background);
+  height: var(--card-height);
+  width: var(--card-width);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: var(--shadow, 0 4px 4px 0 rgba(0, 0, 0, 0.02));
+  transition: transform var(--transition), box-shadow var(--transition);
+  transform: scale(var(--scale, 1)) translateZ(0);
+}
+.card__body:active {
+  --scale: 0.96;
+}
+.card__body-cover {
+  --c-border: var(--card-radius) var(--card-radius) 0 0;
+  --c-width: 100%;
+  --c-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.card__body-cover:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--c-width);
+  height: var(--c-height);
+  border-radius: var(--c-border);
+  background: linear-gradient(to bottom right, var(--background-image));
+  mix-blend-mode: var(--blend-mode);
+  opacity: var(--opacity-bg, 1);
+  transition: opacity var(--transition) linear;
+}
+.card__body-cover-image {
+  width: var(--c-width);
+  height: var(--c-height);
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--c-border);
+  /* filter: var(--filter-bg, grayscale(1)); */
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, var(--x-y1, 100% 90%), var(--x-y2, 67% 83%), var(--x-y3, 33% 90%), var(--x-y4, 0% 85%));
+          clip-path: polygon(0% 0%, 100% 0%, var(--x-y1, 100% 90%), var(--x-y2, 67% 83%), var(--x-y3, 33% 90%), var(--x-y4, 0% 85%));
+}
+.card__body-cover-checkbox {
+  background: var(--check-bg, var(--background-checkbox));
+  border: 2px solid var(--check-border, #fff);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  opacity: var(--check-opacity, 0);
+  transition: transform var(--transition), opacity calc(var(--transition) * 1.2) linear;
+  transform: scale(var(--check-scale, 0));
+}
+.card__body-cover-checkbox--svg {
+  width: 13px;
+  height: 11px;
+  display: inline-block;
+  vertical-align: top;
+  fill: none;
+  margin: 7px 0 0 5px;
+  stroke: var(--stroke-color, #fff);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: var(--stroke-dashoffset, 16px);
+  transition: stroke-dashoffset 0.4s ease var(--transition);
+}
+.card__body-header {
+  height: var(--header-height);
+  background: var(--background);
+  padding: 0 10px 10px 10px;
+}
+.card__body-header-title {
+  color: var(--text-headline);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.card__body-header-subtitle {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 13px;
+}

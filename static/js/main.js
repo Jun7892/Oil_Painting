@@ -39,6 +39,6 @@ function shiftRight() {
         boxes[1].className = "box move-to-position3-from-right";
         boxes[2].className = "box move-to-position4-from-right";
         boxes[3].className = "box move-to-position5-from-right";
-    }, 500);
+    }, 100);
 
 }
