@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block others %}
+    <link rel="stylesheet" href="{% static 'css/intro.css' %}">
+    <script defer src="{% static 'js/first.js' %}"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+{% endblock %}
+
+{% block title %}first{% endblock %}
+
+{% block content %}
+    <div class="fullWH">
+        <div id="introVideo">
+            <iframe
+                    src="https://www.youtube.com/embed/nDgvmyBnrp0?autoplay=1&mute=1&controls=0&loop=1&rel=0&autohide=1&modestbranding = 1&showinfo = 0"
+                    title="YouTube video player" frameborder="0"></iframe>
+            <div class="handyButton skipBtn btn_loader_skip">
+                <a aria-label='Thanks' class='h-button centered' data-text='SKIP' href='/second'>
+                    <span>S</span>
+                    <span>K</span>
+                    <span>I</span>
+                    <span>P</span>
+                </a>
+                <div class="hand"></div>
+            </div>
+            <div class="audio-button-wrapper">
+                <div class="audioButton btn_audio_toggle">
+                    <svg viewBox="0 0 40 40" class="graphic">
+                        <path d="M27.4,22.1V11.5a1.1,1.1,0,0,0-.5-.9,1.1,1.1,0,0,0-1.1.1c-1.9,1.5-3.9,2.9-5.9,4.3-.1.1-.1.2-.1.4v9.2c0,.1,0,.3.1.3l5.9,4.4.4.2a1.1,1.1,0,0,0,1.2-1Zm-9.7,2.3V15.6h-4a1,1,0,0,0-1.1,1.1v6.6a1,1,0,0,0,1.1,1.1h4Z"
+                              transform="translate(-6,0)" class="speaker"></path> <!---->
+                        <path d="M26,15 Q29,20 26,25" class="line"></path> <!---->
+                        <path d="M30,12 Q36,20 30,28" class="line"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

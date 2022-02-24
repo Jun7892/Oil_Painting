@@ -154,13 +154,11 @@
 #container {
   width: 100%;
   height: 100%;
-  margin-top: -10px;
-  margin-left: -10px;
   position: fixed;
 }
 #container:before {
   content: " ";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -178,8 +176,126 @@
   background: black;
   content: " ";
   display: block;
-  position: absolute;
+  position: fixed;
   animation-name: moveLine;
   animation-duration: 8s;
   animation-iteration-count: infinite;
+}
+#rotateDevice {
+  text-align: left;
+  user-select: none;
+  font-family: "Cuphead",serif;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: url("../img/devilLaugh.7257975.png") bottom/auto 70% no-repeat;
+  background-color: #000;
+  z-index: 2;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.message{
+    font-weight: 400;
+    line-height: 1.5;
+    user-select: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    margin-top: 24px;
+    color: #f9f7eb;
+    text-align: center;
+    font-size: 36px;
+}
+#fireBar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    display: flex;
+    transition: transform 3s linear,visibility 3s;
+    transform: translateY(110%);
+    visibility: hidden;
+}
+
+#fireBar.onFire{
+    transform: translateY(1%);
+}
+
+#fireBar.fast{
+    transition: transform 1s ease-out,visibility 1s;
+
+}
+
+.unit1 {
+  width: 37%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  background: url("../img/fire.41d58d5.png") top/auto 598px;
+  background-repeat: repeat-x;
+}
+
+.unit2{
+    width: 37%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: url("../img/fire.41d58d5.png") top/auto 598px;
+    background-repeat: repeat-x;
+    left: 31%;
+    transform: scaleX(-1);
+    background-position-y: -200px;
+}
+
+.unit3{
+    width: 37%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: url("../img/fire.41d58d5.png") top/auto 598px;
+    background-repeat: repeat-x;
+    right: -2%;
+    background-position-y: -200px;
+}
+
+@font-face {
+    font-family: "CupheadVogue";
+    src: url("../fonts/CupheadVogue-ExtraBold.cbf05a8.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Cuphead";
+    src: url("../fonts/Cuphead-Primary.fafe327.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "CupheadVogue-Bold";
+    src: url("../fonts/CupheadVogue-Bold.ead4795.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Titania";
+    src: url("../fonts/Titania-Regular.e828a11.ttf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "YellowtailRegular";
+    src: url("../fonts/YellowtailRegular.52d2557.ttf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
 }
