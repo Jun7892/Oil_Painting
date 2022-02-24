@@ -4,84 +4,530 @@
 <head>
     <meta charset="UTF-8">
 
-{% block others %}
-    <link rel="stylesheet" href="{% static 'css/testmain.css' %}">
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-{% endblock %}
-<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    {% block others %}
+        <link rel="stylesheet" href="{% static 'css/testmain.css' %}">
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% endblock %}
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <title>CupHead OilPaint</title>
 </head>
 <body>
-    <div class="__layout">
-        <div id="backdrop">
-                <div id="backImageMenu" style="display: none;"></div>
-                <div id="backImageCarousel" style="background-position: 0% 0%;"></div>
-        </div>
+<div class="__layout">
+    <div id="backdrop">
+        <div id="backImageMenu" style="display: none;"></div>
+        <div id="backImageCarousel" style="background-position: 0% 0%;"></div>
+    </div>
 
-        <div class="logoimg">
-            <img src="../static/img/film-2-64.png" style="padding-left: 5vw; padding-right: 32vw; width: 3vw;" onclick="">
-            <img src="../static/img/logoMain.a263c77.png" style="padding-right: 32vw; width: 20vw;">
-            <img src="../static/img/speaker-64.png" style="width: 3vw;" onclick="">
-        </div>
-
-
+    <div class="logoimg">
+        <img src="../static/img/film-2-64.png" style="padding-left: 5vw; padding-right: 32vw; width: 3vw;" onclick="">
+        <img src="../static/img/logoMain.a263c77.png" style="padding-right: 32vw; width: 20vw;">
+        <img src="../static/img/speaker-64.png" style="width: 3vw;" onclick="">
+    </div>
 
 
-<div class="container">
+    <div class="container">
         <div class="button" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt=""></div>
         <div class="cards-wrapper">
             <ul class="cards__container">
+
+
+
+
+
+
                 <li class="box" style="background-color:red">
+                    <div class="card__clone">
+                        <div class="chapterCard card__front">
+                        <label class="card">
+                            <input class="card__input" type="checkbox"/>
+                            <div class="card__body">
+                                <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                   src="https://i.ibb.co/zXmHzBk/category-a.png"/><span
+                                        class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                <header class="card__body-header">
+                                    <h2 class="card__body-header-title">Category A</h2>
+                                    <p class="card__body-header-subtitle">Motorcycles</p>
+                                </header>
+                            </div>
+                        </label>
+                    </div>
+
+
+
+                        <div class="taskCard" style="transform: rotateY(90deg) scale(0.5, 0.5);">
+                        <div class="slider">
+                            <div class="taskList" style="transform: translate(0%, 0px);">
+                                <div class="os-host task-list-wrapper os-host-foreign os-theme-dark os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition os-host-overflow os-host-overflow-y">
+                                    <div class="os-resize-observer-host observed">
+                                        <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
+                                    </div>
+                                    <div class="os-size-auto-observer observed"
+                                         style="height: calc(100% + 1px); float: left;">
+                                        <div class="os-resize-observer"></div>
+                                    </div>
+                                    <div class="os-content-glue"
+                                         style="margin: 0px; height: 1608px; width: 559px;"></div>
+                                    <div class="os-padding">
+                                        <div class="os-viewport os-viewport-native-scrollbars-invisible"
+                                             style="overflow-y: scroll;">
+                                            <div class="os-content" style="padding: 0px; height: auto; width: 100%;">
+                                                <div class="taskListInner">
+                                                    <div class="graphicButton closeBtn colorBlack solidBack sizeSmall">
+                                                        <svg viewBox="-7 -7 34.6 33" class="graphic"><!----> <!---->
+                                                            <!---->
+                                                            <path d="M17,4.2L15.6,2.8L10.3,8.1L5,2.8L3.6,4.2L8.9,9.5L3.6,14.8L5,16.2L10.3,10.9L15.6,16.2L17,14.8L11.7,9.5L17,4.2"></path>
+                                                            <!----> <!----> <!----> <!----></svg>
+                                                    </div> <!---->
+                                                    <div class="chapterNumber"><span class="blurryText">3</span></div>
+                                                    <div class="chapterHeader">
+                                                        <div class="line1"><span class="blurryText">Dog</span></div>
+                                                        <div class="line2"><span class="blurryText">Eat Dog</span></div>
+                                                    </div>
+                                                    <div class="taskListCounter">
+                                                        <svg viewBox="-1 0 271 10" class="background">
+                                                            <path d="M8.3,20.3c-4,0-8.3-3-8.3-6.6S2.1,8.6,3.7,8.6s4.6.7,4.6,5.9H260.6c0-5.2,3-5.9,4.6-5.9s3.8,1.5,3.8,5.1-4.3,6.6-8.4,6.6Z"
+                                                                  class="sledSVG"></path>
+                                                            <path d="M8.5,14.5c0-2.3-3.3-4.9-5.3-2.5S5,17.3,8,17.3H261.1c3,0,6.9-3,4.8-5.3s-5.3.2-5.3,2.5Z"
+                                                                  class="sledSVG"></path>
+                                                        </svg>
+                                                        <div class="inner">
+                                                            <div class="fraction">
+                                                                <div class="numerator">0</div>
+                                                                <div class="bar"></div>
+                                                                <div class="denominator">10</div>
+                                                            </div>
+                                                            <div class="tickmarks">
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                                <svg viewBox="-2 0 8 15" class="tickmark">
+                                                                    <circle cx="2" cy="2" r="2" class="head"></circle>
+                                                                    <path d="M2,13V2" class="horiz"></path>
+                                                                    <path d="M2,11l3,3h-6Z" class="stand"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="character"
+{#                                                                 &quot;/_nuxt/img/char3-sad.4951d51.png&quot;#}
+                                                                 style="background-image: url({% static "img/char3-sad.4951d51.png" %});"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="taskListPrev">
+                                                        <div class="edges edgeL"></div>
+                                                        <div class="edges edgeR"></div>
+                                                        <div class="thumbnail back"></div>
+                                                        <div class="thumbnail front"
+{#                                                             &quot;https://images.prismic.io/netflix-cuphead/1ca82fd5-af5b-400e-8271-f5fbff1a2dfd_Thumb3-1.png?auto=compress,format&quot;#}
+                                                             style="background-image: url(https://images.prismic.io/netflix-cuphead/1ca82fd5-af5b-400e-8271-f5fbff1a2dfd_Thumb3-1.png);"></div>
+                                                        <div class="details">
+                                                            <div class="subHeader">Soul Mission: 1</div>
+                                                            <div class="header">Share the Cuphead SHOW TRAILER!</div>
+                                                            <div class="buttonRow">
+                                                                <div class="textButton dropShadow colorBlack disabled btn_claim_3_1">
+                                                                    <div class="slot slotMain">CLAIM</div>
+                                                                    <div class="slot slotHover">CLAIM</div>
+                                                                </div>
+                                                                <div class="textButton dropShadow btn_start_3_1">
+                                                                    <div class="slot slotMain">START</div>
+                                                                    <div class="slot slotHover">START</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <div class="boxInner"></div> <!----></div>
+                                                    </div>
+                                                    <div class="taskListPrev">
+                                                        <div class="edges edgeL"></div>
+                                                        <div class="edges edgeR"></div>
+                                                        <div class="thumbnail back"></div>
+                                                        <div class="thumbnail front"
+{#                                                             &quot;https://images.prismic.io/netflix-cuphead/8d4877de-ee18-4a2d-9f92-0ad904a6e589_Thumb3-2.png?auto=compress,format&quot;#}
+                                                             style="background-image: url(https://images.prismic.io/netflix-cuphead/8d4877de-ee18-4a2d-9f92-0ad904a6e589_Thumb3-2.png);"></div>
+                                                        <div class="details">
+                                                            <div class="subHeader">Soul Mission: 2</div>
+                                                            <div class="header">Reply to THIS!</div>
+                                                            <div class="buttonRow">
+                                                                <div class="textButton dropShadow colorBlack disabled btn_claim_3_2">
+                                                                    <div class="slot slotMain">CLAIM</div>
+                                                                    <div class="slot slotHover">CLAIM</div>
+                                                                </div>
+                                                                <div class="textButton dropShadow btn_start_3_2">
+                                                                    <div class="slot slotMain">START</div>
+                                                                    <div class="slot slotHover">START</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <div class="boxInner"></div> <!----></div>
+                                                    </div>
+                                                    <div class="taskListPrev">
+                                                        <div class="edges edgeL"></div>
+                                                        <div class="edges edgeR"></div>
+                                                        <div class="thumbnail back"></div>
+                                                        <div class="thumbnail front"
+{#                                                             &quot;https://images.prismic.io/netflix-cuphead/20351b00-4ba2-48d7-b75f-b81c034b6a41_Thumb3-3.png?auto=compress,format&quot;#}
+                                                             style="background-image: url(https://images.prismic.io/netflix-cuphead/20351b00-4ba2-48d7-b75f-b81c034b6a41_Thumb3-3.png);"></div>
+                                                        <div class="details">
+                                                            <div class="subHeader">Soul Mission: 3</div>
+                                                            <div class="header">Share this POST!</div>
+                                                            <div class="buttonRow">
+                                                                <div class="textButton dropShadow colorBlack disabled btn_claim_3_3">
+                                                                    <div class="slot slotMain">CLAIM</div>
+                                                                    <div class="slot slotHover">CLAIM</div>
+                                                                </div>
+                                                                <div class="textButton dropShadow btn_start_3_3">
+                                                                    <div class="slot slotMain">START</div>
+                                                                    <div class="slot slotHover">START</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <div class="boxInner"></div> <!----></div>
+                                                    </div>
+                                                    <div class="taskListPrev">
+                                                        <div class="edges edgeL"></div>
+                                                        <div class="edges edgeR"></div>
+                                                        <div class="thumbnail back"></div>
+                                                        <div class="thumbnail front"
+{#                                                             &quot;https://images.prismic.io/netflix-cuphead/4624dd01-0ca6-4896-8f02-deeadf5b6e5c_Thumb3-4.png?auto=compress,format&quot;#}
+                                                             style="background-image: url(https://images.prismic.io/netflix-cuphead/4624dd01-0ca6-4896-8f02-deeadf5b6e5c_Thumb3-4.png);"></div>
+                                                        <div class="details">
+                                                            <div class="subHeader">Soul Mission: 4</div>
+                                                            <div class="header">Watch our IG Story and Vote in THE
+                                                                POLL!
+                                                            </div>
+                                                            <div class="buttonRow">
+                                                                <div class="textButton dropShadow colorBlack disabled btn_claim_3_4">
+                                                                    <div class="slot slotMain">CLAIM</div>
+                                                                    <div class="slot slotHover">CLAIM</div>
+                                                                </div>
+                                                                <div class="textButton dropShadow btn_start_3_4">
+                                                                    <div class="slot slotMain">START</div>
+                                                                    <div class="slot slotHover">START</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <div class="boxInner"></div> <!----></div>
+                                                    </div>
+                                                    <div class="taskListPrev">
+                                                        <div class="edges edgeL"></div>
+                                                        <div class="edges edgeR"></div>
+                                                        <div class="thumbnail back"></div>
+                                                        <div class="thumbnail front"
+{#                                                             &quot;https://images.prismic.io/netflix-cuphead/c18aa63b-115f-44bc-898b-53ef65a07814_Thumb3-5.png?auto=compress,format&quot;#}
+                                                             style="background-image: url(https://images.prismic.io/netflix-cuphead/c18aa63b-115f-44bc-898b-53ef65a07814_Thumb3-5.png);"></div>
+                                                        <div class="details">
+                                                            <div class="subHeader">Soul Mission: 5</div>
+                                                            <div class="header">Ask Elder Kettle A QUESTION!</div>
+                                                            <div class="buttonRow">
+                                                                <div class="textButton dropShadow colorBlack disabled btn_claim_3_5">
+                                                                    <div class="slot slotMain">CLAIM</div>
+                                                                    <div class="slot slotHover">CLAIM</div>
+                                                                </div>
+                                                                <div class="textButton dropShadow btn_start_3_5">
+                                                                    <div class="slot slotMain">START</div>
+                                                                    <div class="slot slotHover">START</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <div class="boxInner"></div> <!----></div>
+                                                    </div>
+                                                    <div class="taskListPrev">
+                                                        <div class="edges edgeL"></div>
+                                                        <div class="edges edgeR"></div>
+                                                        <div class="thumbnail back"></div>
+                                                        <div class="thumbnail front"
+{#                                                             &quot;https://images.prismic.io/netflix-cuphead/7a58a5bd-f644-4eb9-974d-cea6540d14fb_Thumb3-6.png?auto=compress,format&quot;#}
+                                                             style="background-image: url(https://images.prismic.io/netflix-cuphead/7a58a5bd-f644-4eb9-974d-cea6540d14fb_Thumb3-6.png);"></div>
+                                                        <div class="details">
+                                                            <div class="subHeader">Soul Mission: 6</div>
+                                                            <div class="header">Sniff out the Devil on R/CUPHEAD!</div>
+                                                            <div class="buttonRow">
+                                                                <div class="textButton dropShadow colorBlack disabled btn_claim_3_6">
+                                                                    <div class="slot slotMain">CLAIM</div>
+                                                                    <div class="slot slotHover">CLAIM</div>
+                                                                </div>
+                                                                <div class="textButton dropShadow btn_start_3_6">
+                                                                    <div class="slot slotMain">START</div>
+                                                                    <div class="slot slotHover">START</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <div class="boxInner"></div> <!----></div>
+                                                    </div>
+                                                    <div class="taskListPrev">
+                                                        <div class="edges edgeL"></div>
+                                                        <div class="edges edgeR"></div>
+                                                        <div class="thumbnail back"></div>
+                                                        <div class="thumbnail front"
+{#                                                             &quot;https://images.prismic.io/netflix-cuphead/27866b73-6239-4817-aa1e-57dd019d7906_Thumb3-7.png?auto=compress,format&quot;#}
+                                                             style="background-image: url(https://images.prismic.io/netflix-cuphead/27866b73-6239-4817-aa1e-57dd019d7906_Thumb3-7.png);"></div>
+                                                        <div class="details">
+                                                            <div class="subHeader">Soul Mission: 7</div>
+                                                            <div class="header">Tweet us Your Devilish DRAWINGS!</div>
+                                                            <div class="buttonRow">
+                                                                <div class="textButton dropShadow colorBlack disabled btn_claim_3_7">
+                                                                    <div class="slot slotMain">CLAIM</div>
+                                                                    <div class="slot slotHover">CLAIM</div>
+                                                                </div>
+                                                                <div class="textButton dropShadow btn_start_3_7">
+                                                                    <div class="slot slotMain">START</div>
+                                                                    <div class="slot slotHover">START</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <div class="boxInner"></div> <!----></div>
+                                                    </div>
+                                                    <div class="taskListPrev">
+                                                        <div class="edges edgeL"></div>
+                                                        <div class="edges edgeR"></div>
+                                                        <div class="thumbnail back"></div>
+                                                        <div class="thumbnail front"
+{#                                                             &quot;https://images.prismic.io/netflix-cuphead/575c7e62-e602-4bf1-a0e0-00df128abaca_Thumb3-8.png?auto=compress,format&quot;#}
+                                                             style="background-image: url(https://images.prismic.io/netflix-cuphead/575c7e62-e602-4bf1-a0e0-00df128abaca_Thumb3-8.png);"></div>
+                                                        <div class="details">
+                                                            <div class="subHeader">Soul Mission: 8</div>
+                                                            <div class="header">Make @CupheadShow laugh WITH A MEME!
+                                                            </div>
+                                                            <div class="buttonRow">
+                                                                <div class="textButton dropShadow colorBlack disabled btn_claim_3_8">
+                                                                    <div class="slot slotMain">CLAIM</div>
+                                                                    <div class="slot slotHover">CLAIM</div>
+                                                                </div>
+                                                                <div class="textButton dropShadow btn_start_3_8">
+                                                                    <div class="slot slotMain">START</div>
+                                                                    <div class="slot slotHover">START</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <div class="boxInner"></div> <!----></div>
+                                                    </div>
+                                                    <div class="taskListPrev">
+                                                        <div class="edges edgeL"></div>
+                                                        <div class="edges edgeR"></div>
+                                                        <div class="thumbnail back"></div>
+                                                        <div class="thumbnail front"
+{#                                                             &quot;https://images.prismic.io/netflix-cuphead/7195dc29-931b-499c-8c2f-59ff29bc55e9_Thumb3-9.png?auto=compress,format&quot;#}
+                                                             style="background-image: url(https://images.prismic.io/netflix-cuphead/7195dc29-931b-499c-8c2f-59ff29bc55e9_Thumb3-9.png);"></div>
+                                                        <div class="details">
+                                                            <div class="subHeader">Soul Mission: 9</div>
+                                                            <div class="header">Color This Image and TWEET IT @ US!
+                                                            </div>
+                                                            <div class="buttonRow">
+                                                                <div class="textButton dropShadow colorBlack disabled btn_claim_3_9">
+                                                                    <div class="slot slotMain">CLAIM</div>
+                                                                    <div class="slot slotHover">CLAIM</div>
+                                                                </div>
+                                                                <div class="textButton dropShadow btn_start_3_9">
+                                                                    <div class="slot slotMain">START</div>
+                                                                    <div class="slot slotHover">START</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <div class="boxInner"></div> <!----></div>
+                                                    </div><!----></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable">
+                                        <div class="os-scrollbar-track os-scrollbar-track-off">
+                                            <div class="os-scrollbar-handle"
+                                                 style="transform: translate(0px, 0px); width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="os-scrollbar os-scrollbar-vertical">
+                                        <div class="os-scrollbar-track os-scrollbar-track-off">
+                                            <div class="os-scrollbar-handle"
+                                                 style="transform: translate(0px, 50.788px); height: 41.9154%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="os-scrollbar-corner"></div>
+                                </div>
+                            </div> <!----></div>
+                        <div class="corner cornerLeft"></div>
+                        <div class="corner cornerRight"></div>
+                    </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+                </li>
+
+
+
+
+
+
+
+                <li class="box">
                     <div class="chapterCard">
-                    <img  class="card-img" src="../static/img/char1-sad.72a2aee.png"/>
-                </div>
+                        <label class="card">
+                            <input class="card__input" type="checkbox"/>
+                            <div class="card__body">
+                                <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                   src="https://i.ibb.co/cXjw2Gz/category-b.png"/><span
+                                        class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                <header class="card__body-header">
+                                    <h2 class="card__body-header-title">Category B</h2>
+                                    <p class="card__body-header-subtitle">Cars and ATVs</p>
+                                </header>
+                            </div>
+                        </label>
+                    </div>
                 </li>
                 <li class="box">
                     <div class="chapterCard">
-                    <img  class="card-img" src="../static/img/char2-sad.a575e28.png"/>
-                </div>
-                </li>
-                <li class="box">
-                <div class="chapterCard">
-                    <img  class="card-img" src="../static/img/char4-sad.ae31702.png"/>
-                </div>
+                        <label class="card">
+                            <input class="card__input" type="checkbox"/>
+                            <div class="card__body">
+                                <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                   src="https://i.ibb.co/nDbfH9B/category-c.png"/><span
+                                        class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                <header class="card__body-header">
+                                    <h2 class="card__body-header-title">Category C</h2>
+                                    <p class="card__body-header-subtitle">Large goods vehicle</p>
+                                </header>
+                            </div>
+                        </label>
+                    </div>
                 </li>
                 <li class="box">
                     <div class="chapterCard">
-                    <img  class="card-img" src="../static/img/char5-sad.331d3e5.png"/>
-                </div>
+                        <label class="card">
+                            <input class="card__input" type="checkbox"/>
+                            <div class="card__body">
+                                <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                   src="https://i.ibb.co/7gSQMmm/category-d.png"/><span
+                                        class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                <header class="card__body-header">
+                                    <h2 class="card__body-header-title">Category D</h2>
+                                    <p class="card__body-header-subtitle">Buses</p>
+                                </header>
+                            </div>
+                        </label>
+                    </div>
                 </li>
                 <li class="box">
                     <div class="chapterCard">
-                    <img  class="card-img" src="../static/img/char6-sad.20f7565.png"/>
-                </div>
+                        <label class="card">
+                            <input class="card__input" type="checkbox"/>
+                            <div class="card__body">
+                                <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                   src="https://i.ibb.co/0F3SdsX/category-t.png"/><span
+                                        class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                <header class="card__body-header">
+                                    <h2 class="card__body-header-title">Category T</h2>
+                                    <p class="card__body-header-subtitle">Tractors and SMV</p>
+                                </header>
+                            </div>
+                        </label>
+                    </div>
                 </li>
                 <li class="box box--hide">
                     <div class="chapterCard">
-                    <img  class="card-img" src="../static/img/cuphead.84e47a6.png"/>
-                </div>
-                </li>
-                <li class="box box--hide">
-                    <div class="chapterCard">
-                    <img  class="card-img" src="../static/img/cupheadJump.6fb4db5.png"/>
-                </div>
+                        {#                    <img  class="card-img" src="../static/img/cuphead.84e47a6.png"/>#}
+                        <label class="card">
+                            <input class="card__input" type="checkbox" disabled="disabled"/>
+                            <div class="card__body">
+                                <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                   src="https://i.ibb.co/WDwmPy5/other.png"/><span
+                                        class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                <header class="card__body-header">
+                                    <h2 class="card__body-header-title">Other</h2>
+                                    <p class="card__body-header-subtitle">Additional categories</p>
+                                </header>
+                            </div>
+                        </label>
+                    </div>
                 </li>
             </ul>
         </div>
         <div class="button" onclick="shiftRight()"><img src="https://image.ibb.co/dfPSw7/right_arrow.png" alt=""></div>
     </div>
-
-
-
-
-
-
-        <div id="bottomEarth">
-
-        </div>
+    <div class="openBannerOuter">
+        <div class="openBanner btn_open_chapter" onclick=""></div>
     </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+
+    <div id="bottomEarth">
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
 </body>
 </html>
