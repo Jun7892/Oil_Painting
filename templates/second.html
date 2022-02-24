@@ -1,24 +1,24 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% block others %}
     <link href="../static/css/second.css" rel="stylesheet" type="text/css"/>
     <script>var sound = "{% static "sounds/sound1.mp3" %}"</script>
     <script>var sound1 = "{% static "sounds/sound2.mp3" %}"</script>
     <script>var sound2 = "{% static "sounds/sound3.mp3" %}"</script>
     <script>var sound3 = "{% static "sounds/bgm.mp3" %}"</script>
     <script type="text/javascript" src="../static/js/second.js"></script>
-    <title>second_page</title>
-</head>
-<body>
+{% endblock %}
+
+{% block title %}second{% endblock %}
+
+{% block content %}
 <div class="bgimg">
-    <div id="modal">
+    <div id="modal" style="display: none;">
         <img src="../static/img/bubbleThought3.656c95f.png" style="position: absolute; top: 0%; left: 25%; z-index: 2;">
         <img src="../static/img/devilLaugh.7257975.png" style="position: absolute; top: 10%; left: 25%; z-index: 2; opacity: 0.3;">
         <img src="../static/img/char2-sad.a575e28.png" style=" width: 10vw; position: absolute; top: 10%; left: 67%; z-index: 2; opacity: 0.5;">
-        <img src="../static/img/x-mark-4-64.png" onclick="modalOff()" style="position: absolute; top: 2%; left: 28%; z-index: 2; background-color: lightgrey; border-radius: 50%;">
+        <img src="../static/img/x-mark-4-64.png" onclick="modalOff()" style="position: absolute; top: 2%; left: 28%; z-index: 2; background-color: lightgrey; border-radius: 50%; cursor: url('/static/img/pointer.ac1efb5.png') 2 2,pointer;">
         <p style="position: absolute; top: 0%; left: 50%; z-index: 3; color: gray;">member</p>
         <p style="position: absolute; top: 1%; left: 43%; z-index: 3; font-size: 5vw; font-weight: bolder">17Team</p>
         <div style="position: absolute; top: 35%; left: 30%; z-index: 3">
@@ -34,9 +34,9 @@
             <p style="font-size: 1vw; font-weight: bold;">&nbsp &nbsp &nbsp &nbsp 평범</p>
         </div>
         <div style="position: absolute; top: 35%; left: 60%; z-index: 3">
-            <p style="font-size: 1.5vw; font-weight: bold; color: deeppink;">&nbsp&nbsp&nbsp&nbsp귀요미윤소현</p>
-            <p style="font-size: 1vw; font-weight: bold; color: deeppink;">최강미모, 깜찍뽀짝, 뽀짝깜찍</p>
-            <p style="font-size: 1vw; font-weight: bold; color: deeppink;">게더애교원탑, 자칭캠프외모1위</p>
+            <p style="font-size: 1.5vw; font-weight: bold; color: deeppink;" onclick="charm(sound)">&nbsp&nbsp&nbsp&nbsp귀요미윤소현</p>
+            <p style="font-size: 1vw; font-weight: bold; color: deeppink;" onclick="charm1(sound1)">최강미모, 깜찍뽀짝, 뽀짝깜찍</p>
+            <p style="font-size: 1vw; font-weight: bold; color: deeppink;" onclick="charm2(sound2)">게더애교원탑, 자칭캠프외모1위</p>
         </div>
     </div>
 
@@ -46,41 +46,41 @@
         <img src="../static/img/logoMain.a263c77.png" style="padding-right: 32vw; width: 20vw;">
         <img src="../static/img/speaker-64.png" style="width: 3vw;" onclick="charm3(sound3)">
     </div>
+    <p style="position: absolute; top: 6.7%; left: 5.7%; font-size: 5vw;" onclick="location.href='https://www.youtube.com/embed/Sel3fjl6uyo?autoplay=1&controls=0';">&nbsp</p>
+    <p style="position: absolute; top: 7%; left: 93.7%; font-size: 5vw;" onclick="charm3(sound3)">&nbsp</p>
     <div class="litimg groom">
         <img src="../static/img/bubbleSpeech.3534394.png" style="width: 30vw;">
-        <p class="litimg_p groom" onclick="location.href='main'">기요미는 나양!</p>
+        <p class="litimg_p groom" onclick="location.href='http://127.0.0.1:8000/main/'">LET'S LOOK FOR SOULS!</p>
     </div>
     <div class="secondline">
         <div class="cuphead">
             <img src="../static/img/cuphead.84e47a6.png" style="width: 15vw;" onclick="charm(sound)">
             <img src="../static/img/bubbleThought2.953bf19.png"
                  style="width: 15vw; padding-left: 15vw; position: relative; bottom: 15vw;" class="groom">
-            <img src="../static/img/bubbleThought1.6e8107a.png" style="width: 3vw; position: relative; bottom: 15vw;" class="groom" onclick="modalOn()">
-            <img src="../static/img/mugman.984aff6.png" style="width: 15vw;" id="btn2" onclick="charm2(sound2)">
-            <p class="bubble groom" onclick="charm1(sound1)">예뿌니도 나양!</p>
-            <p class="bubble groom" style="top: 45%;" onclick="charm2(sound2)">여치니도 나양!</p>
+            <img src="../static/img/bubbleThought1.6e8107a.png" style="width: 3vw; position: relative; bottom: 15vw;" class="groom" onclick="charm2(sound2)">
+            <img src="../static/img/mugman.984aff6.png" style="width: 15vw;" id="btn2" onclick="charm1(sound1)">
+            <p class="bubble groom" style="top: 38%; left: 55%; font-size: 2vw;" onclick="modalOn()">ABOUT</p>
+            <p class="bubble groom" style="top: 47%; left: 56.2%; font-size: 1vw;" onclick="charm1(sound1)">MEMBER</p>
         </div>
     </div>
-    <div class="thirdline">
-        <img src="../static/img/soulCounter.2c16a68.png"
-             style="width: 20vw; padding-left: 40vw; position: relative; bottom: 3vw;">
-        <p style="position: absolute; top: 90%; left: 42.7%; font-weight: bold">0</p>
-        <p style="position: absolute; top: 90%; left: 44.35%; font-weight: bold">0</p>
-        <p style="position: absolute; top: 90%; left: 46%; font-weight: bold">0</p>
-        <p style="position: absolute; top: 90%; left: 47.7%; font-weight: bold">0</p>
-        <p style="position: absolute; top: 90%; left: 49.4%; font-weight: bold">0</p>
-        <p style="position: absolute; top: 90%; left: 51.1%; font-weight: bold">0</p>
-        <p style="position: absolute; top: 90%; left: 52.8%; font-weight: bold">0</p>
-        <p style="position: absolute; top: 90%; left: 54.45%; font-weight: bold">0</p>
-        <p style="position: absolute; top: 90%; left: 56.15%; font-weight: bold">0</p>
-        <p style="position: absolute; top: 90%; left: 57.8%; font-weight: bold">0</p>
-    </div>
-    <div class="">
-        <img src="../static/img/earth.ae89ec7.png" style="width: 100%;">
+    <img src="../static/img/soulCounter.2c16a68.png"
+         style="width: 20vw; padding-left: 40vw; position: relative; bottom: 3vw;">
+    <p style="position: absolute; top: 90%; left: 42.7%; font-weight: bold">0</p>
+    <p style="position: absolute; top: 90%; left: 44.35%; font-weight: bold">0</p>
+    <p style="position: absolute; top: 90%; left: 46%; font-weight: bold">0</p>
+    <p style="position: absolute; top: 90%; left: 47.7%; font-weight: bold">5</p>
+    <p style="position: absolute; top: 90%; left: 49.4%; font-weight: bold">4</p>
+    <p style="position: absolute; top: 90%; left: 51.1%; font-weight: bold">7</p>
+    <p style="position: absolute; top: 90%; left: 52.8%; font-weight: bold">2</p>
+    <p style="position: absolute; top: 90%; left: 54.45%; font-weight: bold">9</p>
+    <p style="position: absolute; top: 90%; left: 56.15%; font-weight: bold">1</p>
+    <p style="position: absolute; top: 90%; left: 57.8%; font-weight: bold">8</p>
+
+    <div id="bottomEarth">
+
     </div>
 </div>
-</body>
-</html>
+{% endblock %}
 
 
 {#modal#}
