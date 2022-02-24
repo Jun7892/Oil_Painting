@@ -6,7 +6,6 @@ body{
     cursor: url("/static/img/default.7ee8dab.png") 2 6,default;
     width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     display: flex;
     flex-direction: column;
@@ -59,7 +58,7 @@ body{
     font-size: 1.5rem;
 }
 .handyButton{
-    width: 12%;
+    width: 15%;
     cursor: url("/static/img/pointer.ac1efb5.png") 2 2,pointer;
     position: relative;
     display: inline-block;
@@ -145,8 +144,7 @@ a {
 
 .h-button {
   background: #f9f7eb;
-  padding: 15px;
-  width: 57%;
+  width: 60%;
   text-align: center;
 }
 .h-button span {

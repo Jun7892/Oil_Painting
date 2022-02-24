@@ -304,4 +304,7 @@
         visibility: visible;
         z-index: 99999;
     }
+    #introLoadingPage{
+        visibility: hidden;
+    }
 }
