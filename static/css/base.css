@@ -216,7 +216,6 @@
     display: flex;
     transition: transform 3s linear,visibility 3s;
     transform: translateY(110%);
-    visibility: hidden;
 }
 
 #fireBar.onFire{
@@ -298,4 +297,11 @@
     font-weight: 700;
     font-style: normal;
     font-display: swap
+}
+
+@media (max-width:870px) {
+    #rotateDevice{
+        visibility: visible;
+        z-index: 99999;
+    }
 }

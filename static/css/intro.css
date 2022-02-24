@@ -17,7 +17,7 @@
     top: 0;
 }
 
-iframe {
+#div_YouTube {
     width: 100%;
     height: 100%;
     background-color: #000;
@@ -119,4 +119,37 @@ a {
 }
 .h-button:hover span:nth-child(6), .h-button:focus span:nth-child(6) {
   transition-delay: 0.15s;
+}
+
+.audio-button-wrapper{
+    position: absolute;
+    top: 40px;
+    right: 15px;
+}
+
+.audioButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #f9f7eb;
+    cursor: url("/static/img/pointer.ac1efb5.png") 2 2,pointer;
+    box-shadow: inset 0 4px 4px rgba(0,0,0,.3),0 4px 4px rgba(0,0,0,.3);
+}
+
+.audioButton .graphic {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.audioButton svg {
+    filter: drop-shadow(0 3px 3px rgba(0,0,0,.5));
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.audioButton .speaker {
+    fill: #f9f7eb;
 }
