@@ -14,6 +14,13 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+p {
+    font-family: "CupheadVogue", sans-serif;
+    font-weight: 900;
+    color: #3e3b2a;
+    text-decoration: none;
+}
+
 .container {
     display: flex;
     justify-content: space-around;
@@ -935,13 +942,52 @@ svg {
     transition: fill .5s;
 }
 
+.listbox {
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    background-color: gray;
+    z-index: 5;
+    width: 24vw;
+    height: 5vw;
+}
 
+.listpicone {
+    position: absolute;
+    top: -12%;
+    left: -5%;
+    width: 4vw;
+}
 
+.listname {
+    padding-top: 3%;
+    padding-left: 25%;
+}
 
+.listsim {
+    padding-top: 1%;
+    padding-left: 25%;
+}
 
+.listbox2 {
+    position: absolute;
+    top: 39%;
+    left: 12%;
+    background-color: gray;
+    z-index: 5;
+    width: 24vw;
+    height: 5vw;
+}
 
-
-
+.listbox3 {
+    position: absolute;
+    top: 53%;
+    left: 12%;
+    background-color: gray;
+    z-index: 5;
+    width: 24vw;
+    height: 5vw;
+}
 
 
 
