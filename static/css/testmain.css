@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
 html {
     font-size: 16px;
 }
@@ -5,6 +7,7 @@ html {
 * {
     margin: 0px;
     padding: 0px;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
 }
 
 body {
@@ -23,7 +26,11 @@ body {
     /*margin-left: 0 3%;*/
     margin: 0 3%;
     width: 2rem;
-    cursor: pointer;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+}
+
+.button:active {
+    cursor: url(../img/press.1c07fcb.png) 2 2,pointer; !important;
 }
 
 .button--inactive {
@@ -32,6 +39,10 @@ body {
 
 .button img {
     width: 60%;
+}
+
+.button:active {
+    cursor: url(../img/press.1c07fcb.png) 2 2,pointer; !important;
 }
 
 .cards-wrapper {
@@ -479,11 +490,13 @@ body, html {
 
 .card {
   --background: #fff;
-  --background-checkbox: #0082ff;
+    /*선택시 체크박스 테두리색*/
+  --background-checkbox: #000;
   --background-image: #fff, rgba(0, 107, 175, 0.2);
   --text-color: #666;
   --text-headline: #000;
-  --card-shadow: #0082ff;
+    /*선택시 이미지 테두리색*/
+  --card-shadow: #000;
   --card-height: 190px;
   --card-width: 190px;
   --card-radius: 12px;
@@ -495,6 +508,12 @@ body, html {
       -ms-user-select: none;
           user-select: none;
 }
+
+.card:hover:active {
+    cursor: url(../img/press.1c07fcb.png) 2 2,pointer;
+}
+
+
 .card:nth-child(odd) .card__body-cover-image {
   --x-y1: 100% 90%;
   --x-y2: 67% 83%;
@@ -634,3 +653,295 @@ body, html {
   font-weight: 500;
   font-size: 13px;
 }
+
+/*모달 카드 적용 부분*/
+
+.chapterNumber {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    padding-top: 15px;
+    margin-top: 5%;
+    font-size: 1.5em;
+    text-align: center;
+    background: url(../img/taskListChapter.e76bb33.png) 50%/auto 100% no-repeat;
+    color: #3e3b2a;
+    bottom: 700px;
+}
+
+.chapterHeader {
+    width: 100%;
+    margin: 10px 0 0;
+    text-align: center;
+    color: #3e3b2a;
+    position: relative;
+    bottom: 710px;
+}
+
+.chapterHeader .line1 {
+    font-size: 1.25em;
+    line-height: 1em;
+    letter-spacing: .05em;
+}
+
+.chapterHeader .line2 {
+    font-family: "Titania", serif;
+    font-size: 2.1em;
+    line-height: 1em;
+}
+
+
+
+/*태스크 리스트*/
+/*.taskListPrev {*/
+/*    position: relative;*/
+/*    width: 95%;*/
+/*    height: 125px;*/
+/*    margin: 30px auto;*/
+/*}*/
+
+/*.taskListPrev .edges.edgeL {*/
+/*    left: 0;*/
+/*}*/
+
+/*.taskListPrev .edges {*/
+/*    width: 50%;*/
+/*    height: 100%;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    background: url(../img/taskPreview.ab35210.png) 0 0/auto 100% no-repeat;*/
+/*}*/
+
+/*.taskListPrev .thumbnail.back {*/
+/*    top: -5px;*/
+/*    left: 29px;*/
+/*    transform: rotate(-5deg);*/
+/*    background-image: url(../img/rewardBack.71e7bb0.jpg);*/
+/*}*/
+
+/*.taskListPrev .thumbnail {*/
+/*    width: 100px;*/
+/*    height: 135px;*/
+/*    position: absolute;*/
+/*    background: 50%/cover no-repeat;*/
+/*    transition: transform .3s ease-out;*/
+/*    box-shadow: -3px 3px 2px rgb(0 0 0 / 30%);*/
+/*    border-radius: 7px;*/
+/*}*/
+
+/*.taskListPrev .thumbnail.front {*/
+/*    top: -5px;*/
+/*    left: 40px;*/
+/*    transform: rotate(3deg);*/
+/*    background-image: url(https://images.prismic.io/netflix-cuphead/546e0216-c57f-426f-be99-0313f71fb334_Thumb1-1.png?auto=compress,format);*/
+/*}*/
+
+/*@media (min-width: 600px){*/
+/*    .taskListPrev .details {*/
+/*    max-width: none;*/
+/*}*/
+/*    .taskListPrev .header {*/
+/*    font-size: 1.5em;*/
+/*}*/
+/*}*/
+
+/*.taskListPrev .details {*/
+/*    width: 50%;*/
+/*    max-width: 200px;*/
+/*    height: 90%;*/
+/*    position: absolute;*/
+/*    top: 14%;*/
+/*    left: 150px;*/
+/*}*/
+
+/*.taskListPrev .subHeader {*/
+/*    opacity: .5;*/
+/*    font-size: .75em;*/
+/*}*/
+
+/*.taskListPrev .header {*/
+/*    font-size: 1.2em;*/
+/*    line-height: 1em;*/
+/*}*/
+
+/*.taskListPrev .buttonRow {*/
+/*    position: absolute;*/
+/*    bottom: -0.5em;*/
+/*    width: 100%;*/
+/*    min-width: 170px;*/
+/*}*/
+
+/*.taskListPrev .textButton {*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.textButton.dropShadow {*/
+/*    box-shadow: 0 4px 4px rgb(0 0 0 / 30%);*/
+/*}*/
+
+/*.textButton {*/
+/*    position: relative;*/
+/*    border-radius: 20px;*/
+/*    padding: 0 15px;*/
+/*    border: 1px solid #3e3b2a;*/
+/*    background: #f9f7eb;*/
+/*    color: #3e3b2a;*/
+/*    font-size: 1.2em;*/
+/*    letter-spacing: .04em;*/
+/*    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;*/
+/*    overflow: hidden;*/
+/*    user-select: none;*/
+/*}*/
+
+/*.textButton .slot {*/
+/*    padding: 7px 0 3px;*/
+/*    line-height: 1.2em;*/
+/*    transition: transform .3s ease-out;*/
+/*    pointer-events: none;*/
+/*}*/
+
+/*.textButton .slotHover {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    transform: translateY(100%);*/
+/*    height: 100%;*/
+/*}*/
+
+/*.textButton .slot {*/
+/*    padding: 7px 0 3px;*/
+/*    line-height: 1.2em;*/
+/*    transition: transform .3s ease-out;*/
+/*    pointer-events: none;*/
+/*}*/
+
+/*.taskListPrev .checkbox {*/
+/*    position: absolute;*/
+/*    top: -7px;*/
+/*    right: 11px;*/
+/*}*/
+
+/*.checkbox {*/
+/*    width: 28px;*/
+/*    height: 28px;*/
+/*    border: 2px solid #3e3b2a;*/
+/*    background: #f9f7eb;*/
+/*    padding: 5px;*/
+/*    position: relative;*/
+/*}*/
+
+/*.checkbox .boxInner {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    border: 2px solid #8a8a8a;*/
+/*    box-shadow: inset -3px 3px 1px rgb(0 0 0 / 30%);*/
+/*}*/
+
+
+  /*task카드 css 시작*/
+
+      @media (min-width: 600px) {
+        .taskCard {
+            top: 120px;
+            bottom: 0;
+            height: auto;
+            max-height: 720px;
+            left: 50%;
+            margin-left: -300px;
+            padding: 21px 20px 25px;
+            border: none;
+            background: url(../img/detailCard.0b5c10e.png) top/100% auto no-repeat;
+        }
+    }
+
+
+/*모달 css 시작*/
+
+.modal {
+    /* z-index: 0; */
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 30vw;
+    margin: 100px auto;
+     display: none;
+}
+
+.modal > img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal_close_btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+
+
+/*모달 x 버튼*/
+.closeBtn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 4;
+}
+
+.graphicButton.sizeSmall {
+    width: 32px;
+    height: 32px;
+}
+
+.graphicButton.solidBack {
+    background: #f9f7eb;
+}
+
+.graphicButton.colorBlack {
+    border-color: #3e3b2a;
+}
+
+.graphicButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #f9f7eb;
+    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    transition: border-color .5s,background .5s;
+}
+
+.graphicButton:hover:active {
+    cursor: url(../img/press.1c07fcb.png) 2 2,pointer;
+}
+
+.graphicButton .graphic {
+    transform: scale(1.001);
+    width: 100%;
+    height: 100%;
+    transition: transform .1s ease-out;
+    pointer-events: none;
+}
+
+svg {
+    overflow: hidden;
+        vertical-align: middle;
+}
+
+.graphicButton.colorBlack path {
+    fill: #3e3b2a;
+}
+
+.graphicButton path {
+    fill: #f9f7eb;
+    transition: fill .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
