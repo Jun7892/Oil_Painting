@@ -8,7 +8,7 @@
     <script>
 
         $('.btn_open_chapter').on('click', () => {
-            const img = $('이미지 넣을 공간... 인자...').여튼이미지를가져올거임           !@$!%!%@!#Y$@!#%#$@%#*&^!#%^@%#&
+            const img = $('.thumb').src.replace(/^url\(['"](.+)['"]\)/, '$1');
             const key = $('파일이름 설정할 인풋값').val();파일이름설정할인풋값
 
 
@@ -38,6 +38,7 @@
                 url: "http://localhost:5000/api/vi/nsts",
                 data: testset,
                 method: "POST",
+                cache: false,
                 processData: false,
                 contentType: false,
                 success: function (data) {
@@ -56,6 +57,51 @@
                 }
             })
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        {#샘플용 ajax#}
+
+        async function predict() {
+    // 파일의 인풋값을 #file-input에서 받아서 저장
+    let fileInput = $('#file-input')[0].files[0]
+    // form_data를 생성
+    let form_data = new FormData();
+    // append로 붙여서 전송 준비 키값은 file_give
+    await form_data.append("file_give", fileInput)
+
+    $.ajax({
+        type: "POST",
+        url: "/api/predict",
+        // url 값이 같은 곳과 POST ajax 통신
+        data: form_data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        // data, cache, contentType, processData 설정 중요
+        success: function (response) {
+            // 서버에서 json으로 보내준 값을 response['']로 받아줌
+            let pred = response['pred']
+            let yourpoke = parseFloat(response['pokeclass'][1])
+
+
+
+            console.log(yourpoke)
+            console.log("클라이ㅇㅇㅇ언트")
+            console.log(pred)
+
+
+
+
     </script>
 </body>
 </html>
