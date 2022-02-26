@@ -80,7 +80,7 @@ function modal(id) {
                     zIndex: zIndex + 1,
 
                     // div center 정렬
-                    top: '50%',
+                    top: '58%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
                     msTransform: 'translate(-50%, -50%)',

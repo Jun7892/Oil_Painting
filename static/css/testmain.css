@@ -473,8 +473,9 @@ body, html {
 
 .openBannerOuter {
     position: absolute;
-    margin: 72px 828px;
-    width: 265px;
+    top: 80%;
+    left: 39%;
+    width: 22vw;
     height: 10%;
     transition: transform .3s ease-out;
 }
@@ -673,7 +674,7 @@ body, html {
     text-align: center;
     background: url(../img/taskListChapter.e76bb33.png) 50%/auto 100% no-repeat;
     color: #3e3b2a;
-    bottom: 700px;
+    bottom: 690px;
 }
 
 .chapterHeader {
@@ -682,7 +683,7 @@ body, html {
     text-align: center;
     color: #3e3b2a;
     position: relative;
-    bottom: 710px;
+    bottom: 700px;
 }
 
 .chapterHeader .line1 {
@@ -946,7 +947,8 @@ svg {
     position: absolute;
     top: 25%;
     left: 12%;
-    background-color: gray;
+    /*background: url(../img/taskPreview.ab35210.png);*/
+    /*background-size: cover;*/
     z-index: 5;
     width: 24vw;
     height: 5vw;
@@ -957,6 +959,8 @@ svg {
     top: -12%;
     left: -5%;
     width: 4vw;
+    height: 5vw;
+    z-index: 1;
 }
 
 .listname {
@@ -973,7 +977,6 @@ svg {
     position: absolute;
     top: 39%;
     left: 12%;
-    background-color: gray;
     z-index: 5;
     width: 24vw;
     height: 5vw;
@@ -983,11 +986,32 @@ svg {
     position: absolute;
     top: 53%;
     left: 12%;
-    background-color: gray;
     z-index: 5;
     width: 24vw;
     height: 5vw;
 }
 
+.edges.edgeL {
+    left: 0;
+}
 
+.edges {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: url(../img/taskPreview.ab35210.png) 0 0/auto 100% no-repeat;
+}
 
+.edges.edgeR {
+    left: 50%;
+    transform: scaleX(-1);
+}
+
+.edges {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: url(../img/taskPreview.ab35210.png) 0 0/auto 100% no-repeat;
+}
