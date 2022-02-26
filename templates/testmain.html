@@ -68,22 +68,24 @@
 
                     <li class="box">
                         <div class="chapterCard">
-                            {#                    <img  class="card-img" src="../static/img/cuphead.84e47a6.png"/>#}
-                            <label class="card">
-                                <input class="card__input" type="checkbox" disabled="disabled"/>
-                                <div class="card__body">
-                                    <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="https://i.ibb.co/WDwmPy5/other.png"/><span
-                                            class="card__body-cover-checkbox">
-          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-          </svg></span></div>
-                                    <header class="card__body-header">
-                                        <h2 class="card__body-header-title">Other</h2>
-                                        <p class="card__body-header-subtitle">Additional categories</p>
-                                    </header>
+                            <div class="wrapper">
+                                <div class="drop">
+                                    <div class="cont">
+                                        <i class="fa fa-cloud-upload"></i>
+                                        <div class="tit">
+                                            Drag & Drop
+                                        </div>
+                                        <div class="desc">
+                                            your files to Assets, or
+                                        </div>
+                                        <div class="browse">
+                                            click here to browse
+                                        </div>
+                                    </div>
+                                    <output id="list"></output>
+                                    <input id="files" multiple="true" name="files[]" type="file"/>
                                 </div>
-                            </label>
+                            </div>
                         </div>
                     </li>
 
@@ -200,7 +202,7 @@
 
             <div class="dragdrop">
                 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+                <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
             </div>
 
 
