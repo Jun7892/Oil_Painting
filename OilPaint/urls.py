@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from ninja import NinjaAPI
 
+
 from nstapp.apis.v1.nst_router import router as nst_router
 
 api = NinjaAPI()
@@ -27,5 +28,5 @@ urlpatterns = [
     path("api/v1/", api.urls),
     path('main/', include('main.urls')),
     path('second/', include('second.urls')),
-    path('first/', include('first.urls')),
+    path('', include('first.urls')),
 ]
