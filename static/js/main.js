@@ -201,3 +201,11 @@ function handleFileSelect(evt) {
 }
 
 $('#files').change(handleFileSelect);
+
+
+function charm3(sound3) {
+    let audio = new Audio(sound3);
+    audio.volume = 0.5;
+    audio.play();
+    console.log('aaaa');
+}

@@ -2,7 +2,7 @@
 {% load static %}
 {% block others %}
     <link rel="stylesheet" href="{% static 'css/testmain.css' %}">
-
+    <script>var sound3 = "{% static "sounds/bgm.mp3" %}"</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 {% endblock %}
@@ -20,10 +20,12 @@
             <img src="../static/img/logoMain.a263c77.png" style="padding-right: 32vw; width: 20vw;">
             <img src="../static/img/speaker-64.png" style="width: 3vw;" onclick="">
         </div>
+        <p style="position: absolute; top: 14%; left: 6%; font-size: 5vw;" onclick="location.href='https://www.youtube.com/embed/Sel3fjl6uyo?autoplay=1&controls=0';">&nbsp</p>
+        <p style="position: absolute; top: 14%; left: 93%; font-size: 5vw;" onclick="charm3(sound3)">&nbsp</p>
 
 
         <div class="container">
-            <div class="button" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt="">
+            <div class="button" style="cursor: url(../static/img/press.1c07fcb.png) 2 2,pointer;" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt="">
             </div>
             <div class="cards-wrapper">
                 <ul class="cards__container">
@@ -33,7 +35,7 @@
                                 <input class="card__input" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="https://i.ibb.co/zXmHzBk/category-a.png"/><span
+                                                                       src="../static/img/paint1.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -52,7 +54,7 @@
                                 <input class="card__input" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="https://i.ibb.co/cXjw2Gz/category-b.png"/><span
+                                                                       src="../static/img/paint2.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -95,7 +97,7 @@
                                 <input class="card__input" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="https://i.ibb.co/nDbfH9B/category-c.png"/><span
+                                                                       src="../static/img/paint3.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -114,7 +116,7 @@
                                 <input class="card__input" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="https://i.ibb.co/7gSQMmm/category-d.png"/><span
+                                                                       src="../static/img/paint4.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -133,7 +135,7 @@
                                 <input class="card__input" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="https://i.ibb.co/0F3SdsX/category-t.png"/><span
+                                                                       src="../static/img/paint8.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>

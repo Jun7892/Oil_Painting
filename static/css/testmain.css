@@ -7,7 +7,7 @@ html {
 * {
     margin: 0px;
     padding: 0px;
-    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    cursor: url("/static/img/default.7ee8dab.png") 2 6,default;
 }
 
 body {
@@ -15,6 +15,7 @@ body {
 }
 
 p {
+    cursor: url("/static/img/pointer.ac1efb5.png") 2 2,pointer;
     font-family: "CupheadVogue", sans-serif;
     font-weight: 900;
     color: #3e3b2a;
@@ -33,7 +34,7 @@ p {
     /*margin-left: 0 3%;*/
     margin: 0 3%;
     width: 2rem;
-    cursor: url(../img/pointer.ac1efb5.png) 2 2,pointer;
+    cursor: url("/static/img/pointer.ac1efb5.png") 2 2,pointer;
 }
 
 .button:active {
