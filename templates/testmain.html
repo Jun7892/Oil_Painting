@@ -2,173 +2,190 @@
 {% load static %}
 {% block others %}
     <link rel="stylesheet" href="{% static 'css/testmain.css' %}">
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 {% endblock %}
 {% block title %}main{% endblock %}
 {% block content %}
-<div class="__layout">
-    <div id="backdrop">
-        <div id="backImageMenu" style="display: none;"></div>
-        <div id="backImageCarousel" style="background-position: 0% 0%;"></div>
-    </div>
-
-    <div class="logoimg">
-        <img src="../static/img/film-2-64.png" style="padding-left: 5vw; padding-right: 32vw; width: 3vw;" onclick="">
-        <img src="../static/img/logoMain.a263c77.png" style="padding-right: 32vw; width: 20vw;">
-        <img src="../static/img/speaker-64.png" style="width: 3vw;" onclick="">
-    </div>
-
-
-    <div class="container">
-        <div class="button" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt=""></div>
-        <div class="cards-wrapper">
-            <ul class="cards__container">
-
-
-
-
-
-
-                <li class="box" style="background-color:red">
-                        <div class="chapterCard card__front">
-                        <label class="card">
-                            <input class="card__input" type="checkbox"/>
-                            <div class="card__body">
-                                <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                   src="https://i.ibb.co/zXmHzBk/category-a.png"/><span
-                                        class="card__body-cover-checkbox">
-          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-          </svg></span></div>
-                                <header class="card__body-header">
-                                    <h2 class="card__body-header-title">Category A</h2>
-                                    <p class="card__body-header-subtitle">Motorcycles</p>
-                                </header>
-                            </div>
-                        </label>
-                    </div>
-                        
-                </li>
-
-
-
-
-
-
-
-                <li class="box">
-                    <div class="chapterCard">
-                        <label class="card">
-                            <input class="card__input" type="checkbox"/>
-                            <div class="card__body">
-                                <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                   src="https://i.ibb.co/cXjw2Gz/category-b.png"/><span
-                                        class="card__body-cover-checkbox">
-          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-          </svg></span></div>
-                                <header class="card__body-header">
-                                    <h2 class="card__body-header-title">Category B</h2>
-                                    <p class="card__body-header-subtitle">Cars and ATVs</p>
-                                </header>
-                            </div>
-                        </label>
-                    </div>
-                </li>
-                <li class="box">
-                    <div class="chapterCard">
-                        <label class="card">
-                            <input class="card__input" type="checkbox"/>
-                            <div class="card__body">
-                                <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                   src="https://i.ibb.co/nDbfH9B/category-c.png"/><span
-                                        class="card__body-cover-checkbox">
-          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-          </svg></span></div>
-                                <header class="card__body-header">
-                                    <h2 class="card__body-header-title">Category C</h2>
-                                    <p class="card__body-header-subtitle">Large goods vehicle</p>
-                                </header>
-                            </div>
-                        </label>
-                    </div>
-                </li>
-                <li class="box">
-                    <div class="chapterCard">
-                        <label class="card">
-                            <input class="card__input" type="checkbox"/>
-                            <div class="card__body">
-                                <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                   src="https://i.ibb.co/7gSQMmm/category-d.png"/><span
-                                        class="card__body-cover-checkbox">
-          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-          </svg></span></div>
-                                <header class="card__body-header">
-                                    <h2 class="card__body-header-title">Category D</h2>
-                                    <p class="card__body-header-subtitle">Buses</p>
-                                </header>
-                            </div>
-                        </label>
-                    </div>
-                </li>
-                <li class="box">
-                    <div class="chapterCard">
-                        <label class="card">
-                            <input class="card__input" type="checkbox"/>
-                            <div class="card__body">
-                                <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                   src="https://i.ibb.co/0F3SdsX/category-t.png"/><span
-                                        class="card__body-cover-checkbox">
-          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-          </svg></span></div>
-                                <header class="card__body-header">
-                                    <h2 class="card__body-header-title">Category T</h2>
-                                    <p class="card__body-header-subtitle">Tractors and SMV</p>
-                                </header>
-                            </div>
-                        </label>
-                    </div>
-                </li>
-                <li class="box box--hide">
-                    <div class="chapterCard">
-                        {#                    <img  class="card-img" src="../static/img/cuphead.84e47a6.png"/>#}
-                        <label class="card">
-                            <input class="card__input" type="checkbox" disabled="disabled"/>
-                            <div class="card__body">
-                                <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                   src="https://i.ibb.co/WDwmPy5/other.png"/><span
-                                        class="card__body-cover-checkbox">
-          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
-            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-          </svg></span></div>
-                                <header class="card__body-header">
-                                    <h2 class="card__body-header-title">Other</h2>
-                                    <p class="card__body-header-subtitle">Additional categories</p>
-                                </header>
-                            </div>
-                        </label>
-                    </div>
-                </li>
-            </ul>
+    <div class="__layout">
+        <div id="backdrop">
+            <div id="backImageMenu" style="display: none;"></div>
+            <div id="backImageCarousel" style="background-position: 0% 0%;"></div>
         </div>
-        <div class="button" onclick="shiftRight()"><img src="https://image.ibb.co/dfPSw7/right_arrow.png" alt=""></div>
+
+        <div class="logoimg">
+            <img src="../static/img/film-2-64.png" style="padding-left: 5vw; padding-right: 32vw; width: 3vw;"
+                 onclick="">
+            <img src="../static/img/logoMain.a263c77.png" style="padding-right: 32vw; width: 20vw;">
+            <img src="../static/img/speaker-64.png" style="width: 3vw;" onclick="">
+        </div>
+
+
+        <div class="container">
+            <div class="button" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt="">
+            </div>
+            <div class="cards-wrapper">
+                <ul class="cards__container">
+                    <li class="box" style="background-color:red">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="https://i.ibb.co/zXmHzBk/category-a.png"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">Category A</h2>
+                                        <p class="card__body-header-subtitle">Motorcycles</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="https://i.ibb.co/cXjw2Gz/category-b.png"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">Category B</h2>
+                                        <p class="card__body-header-subtitle">Cars and ATVs</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="https://i.ibb.co/nDbfH9B/category-c.png"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">Category C</h2>
+                                        <p class="card__body-header-subtitle">Large goods vehicle</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+
+
+                    <li class="box">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="https://i.ibb.co/7gSQMmm/category-d.png"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">Category D</h2>
+                                        <p class="card__body-header-subtitle">Buses</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="box">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="https://i.ibb.co/0F3SdsX/category-t.png"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">Category T</h2>
+                                        <p class="card__body-header-subtitle">Tractors and SMV</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="box box--hide">
+                        <div class="chapterCard">
+                            {#                    <img  class="card-img" src="../static/img/cuphead.84e47a6.png"/>#}
+                            <label class="card">
+                                <input class="card__input" type="checkbox" disabled="disabled"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="https://i.ibb.co/WDwmPy5/other.png"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">Other</h2>
+                                        <p class="card__body-header-subtitle">Additional categories</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="button" onclick="shiftRight()"><img src="https://image.ibb.co/dfPSw7/right_arrow.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="openBannerOuter">
+            <div class="openBanner btn_open_chapter">
+
+            </div>
+        </div>
+
+
+        <div id="my_modal" class="modal">
+            <img src="/static/img/detailCard.0b5c10e.png" alt="">
+            <div class="graphicButton closeBtn colorBlack solidBack sizeSmall">
+                <svg viewBox="-7 -7 34.6 33" class="graphic"><!----> <!----> <!---->
+                    <path d="M17,4.2L15.6,2.8L10.3,8.1L5,2.8L3.6,4.2L8.9,9.5L3.6,14.8L5,16.2L10.3,10.9L15.6,16.2L17,14.8L11.7,9.5L17,4.2"></path>
+                    <!----> <!----> <!----> <!----></svg>
+            </div>
+            <div class="chapterNumber" style="z-index: 3"><span class="blurryText">1</span></div>
+            <div class="chapterHeader" style="z-index: 3">
+                <div class="line1"><span class="blurryText">Half</span></div>
+                <div class="line2"><span class="blurryText">Baked</span></div>
+            </div>
+            <div class="dragdrop">
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+            </div>
+
+
+        </div>
+
+
+        <div id="bottomEarth">
+
+        </div>
     </div>
-    <div class="openBannerOuter">
-        <div class="openBanner btn_open_chapter" onclick=""></div>
-    </div>
 
-
-    <div id="bottomEarth">
-
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 {% endblock %}
