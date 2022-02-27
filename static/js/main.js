@@ -219,3 +219,60 @@ audio.onpause = function () {
 };
 console.log('aaaa');
 }
+
+
+
+
+// ajax통신
+
+$('.btn_open_chapter').on('click', () => {
+            const img = document.querySelector(".thumb").src;
+            const key = ($('#filename').val() + '.png');
+            console.log(img)
+            console.log(key)
+
+            const file = files[0];
+
+            let testset = new FormData();
+
+            testset.append('file', file);
+            testset.append('img', img);
+            testset.append('key', key);
+
+            if (img.length <= 0) {
+                alert('이미지를 넣어주세요')
+            } else if (key.length <= 0) {
+                alert('파일 이름을 입력해주세요.')
+            } else {
+                sendimage(testset);
+                console.log(files[0])
+            }
+
+        });
+
+
+
+        function sendimage() {
+            $.ajax({
+                url: "http://localhost:5000/api/vi/docs",
+                data: testset,
+                method: "POST",
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    alert('성공')
+                    console.log('성공')
+                },
+                error: function (request, status, error) {
+                    alert(error)
+                    console.log('error')
+                },
+                complete: function () {
+                    alert('끝까지 실행완료')
+                    console.log('끝까지 실행완료됨.')
+                    // 모달창에서 완성화면을 보여줘야함 이 부분 아직 안 만들음.
+                    location.reload()
+                }
+            })
+        }

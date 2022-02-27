@@ -9,8 +9,9 @@
 
         $('.btn_open_chapter').on('click', () => {
             const img = $('.thumb').src.replace(/^url\(['"](.+)['"]\)/, '$1');
-            const key = $('파일이름 설정할 인풋값').val();파일이름설정할인풋값
-
+            const key = ($('#filename').val() + '.png');
+            console.log(img)
+            console.log(key)
 
             const file = files[0];
 
@@ -26,6 +27,7 @@
                 alert('파일 이름을 입력해주세요.')
             } else {
                 sendimage(testset);
+                modal(id);
                 console.log(files[0])
             }
 
