@@ -21,13 +21,15 @@
             <img src="../static/img/speaker-64.png" style="width: 3vw;" onclick="">
 
         </div>
-        <p style="position: absolute; top: 14%; left: 6%; font-size: 5vw;" onclick="location.href='https://www.youtube.com/embed/Sel3fjl6uyo?autoplay=1&controls=0';">&nbsp</p>
+        <p style="position: absolute; top: 14%; left: 6%; font-size: 5vw;"
+           onclick="location.href='https://www.youtube.com/embed/Sel3fjl6uyo?autoplay=1&controls=0';">&nbsp</p>
         <p style="position: absolute; top: 14%; left: 93%; font-size: 5vw;" onclick="charm3(sound3)">&nbsp</p>
         <audio id="myAudio" src="{% static "sounds/bgm.mp3" %}" preload="auto"></audio>
 
 
         <div class="container">
-            <div class="button" style="cursor: url(../static/img/press.1c07fcb.png) 2 2,pointer;" onclick="shiftLeft()"><img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt="">
+            <div class="button" style="cursor: url(../static/img/press.1c07fcb.png) 2 2,pointer;" onclick="shiftLeft()">
+                <img src="https://image.ibb.co/mRsEb7/left_arrow.png" alt="">
             </div>
             <div class="cards-wrapper">
                 <ul class="cards__container">
@@ -89,6 +91,12 @@
                                     <output id="list"></output>
                                     <input id="files" multiple="true" name="files[]" type="file"/>
                                 </div>
+                            </div>
+                            <div class="form">
+                                <input id="filename" type="text" name="name" autocomplete="off" required/>
+                                <label for="name" class="label-name">
+                                    <span class="content-name">File name</span>
+                                </label>
                             </div>
                         </div>
                     </li>
