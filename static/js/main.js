@@ -69,6 +69,9 @@ function modal(id) {
     modal.querySelector('.closeBtn').addEventListener('click', function () {
         bg.remove();
         modal.style.display = 'none';
+        document.querySelector('#filename').value = null;
+        $('.thumb').src.empty()
+        // location.reload()
     });
 
     modal.setStyle({
@@ -316,7 +319,7 @@ $('.btn_open_chapter').on('click', () => {
             console.log('끝까지 실행완료됨.')
 
             // 모달창에서 완성화면을 보여줘야함 이 부분 아직 안 만들음.
-            // location.reload()
+
         }
     });
 })
