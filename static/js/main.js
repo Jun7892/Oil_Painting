@@ -69,8 +69,10 @@ function modal(id) {
     modal.querySelector('.closeBtn').addEventListener('click', function () {
         bg.remove();
         modal.style.display = 'none';
+        // .value = null; 이나 .empty() 2가지 방법으로 비우는 방법이 있어서 2가지 적용해놓음
         document.querySelector('#filename').value = null;
-        $('.thumb').src.empty()
+        $('#list').empty()
+        $('#files').empty()
         // location.reload()
     });
 
@@ -155,6 +157,11 @@ document.querySelector('.btn_open_chapter').addEventListener('click', function (
 
 var drop = $("input");
 drop.on('dragenter', function (e) {
+
+    // 이미지파일 중복 안들어가게 넣을때마다 비우고 시작
+    $('#list').empty()
+    $('#files').empty()
+
     $(".drop").css({
         "border": "4px dashed #09f",
         "background": "rgba(0, 153, 255, .05)"
@@ -174,6 +181,8 @@ drop.on('dragenter', function (e) {
 
 
 function handleFileSelect(evt) {
+    $('#list').empty()
+    $('#files').empty()
     var files = evt.target.files; // FileList object
 
     // Loop through the FileList and render image files as thumbnails.
