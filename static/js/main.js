@@ -293,42 +293,63 @@ console.log('aaaa');
 
 $('.btn_open_chapter').on('click', () => {
 
+    var select = [];
 
-    let file = $('#files')[0].files[0];
-    let key = ($('#filename').val() + '.png');
+    $("input[name=check]:checked").each(function(i){
+        select.push($(this).val());
+    });
+    console.log(select)
+    let first_data = new FormData()
+    first_data.append('select', select)
 
-    console.log(file)
-    console.log(key)
+     $.ajax({
+        url: '/main/oil',
+        type: 'GET',
+        data:
+            first_data,
+        datatype: 'json', // 서버에서 반환되는 데이터 json 형식
+        success: function(data){ // AJAX 통신이 성공하면 해당 과일의 영어 단어가 출려되도록
 
-
-    let form_data = new FormData()
-
-    form_data.append('img', file)
-    form_data.append('key', key)
-
-    $.ajax({
-        type: "POST",
-        url: "http://localhost:5000/api/v1/nsts/",
-        data: form_data,
-        cache: false,
-        processData: false,
-        contentType: false,
-        enctype: 'multipart/form-data',
-        success: function (response) {
-            alert('성공')
-            console.log('성공')
-        },
-        error: function (request, status, error) {
-            alert('error')
-
-            console.log(request, status, error)
-        },
-        complete: function (response) {
-            alert('끝까지 실행완료')
-            console.log('끝까지 실행완료됨.')
-
-            // 모달창에서 완성화면을 보여줘야함 이 부분 아직 안 만들음.
-
+            console.log(data.result)
+            console.log("success")
         }
     });
+
+    // let file = $('#files')[0].files[0];
+    // let key = ($('#filename').val() + '.png');
+    //
+    // console.log(file)
+    // console.log(key)
+    //
+    //
+    // let form_data = new FormData()
+    //
+    // form_data.append('img', file)
+    // form_data.append('key', key)
+
+    // $.ajax({
+    //     type: "POST",
+    //     url: "http://localhost:5000/api/v1/nsts/",
+    //     data: form_data,
+    //     cache: false,
+    //     processData: false,
+    //     contentType: false,
+    //     enctype: 'multipart/form-data',
+    //     success: function (response) {
+    //         alert('성공')
+    //         console.log('성공')
+    //     },
+    //     error: function (request, status, error) {
+    //         alert('error')
+    //
+    //         console.log(request, status, error)
+    //     },
+    //     complete: function (response) {
+    //         alert('끝까지 실행완료')
+    //         console.log('끝까지 실행완료됨.')
+    //
+    //         // 모달창에서 완성화면을 보여줘야함 이 부분 아직 안 만들음.
+    //
+    //     }
+    // });
 })
