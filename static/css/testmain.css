@@ -675,7 +675,7 @@ body, html {
     text-align: center;
     background: url(../img/taskListChapter.e76bb33.png) 50%/auto 100% no-repeat;
     color: #3e3b2a;
-    bottom: 690px;
+    bottom: 36vw;
 }
 
 .chapterHeader {
@@ -684,7 +684,7 @@ body, html {
     text-align: center;
     color: #3e3b2a;
     position: relative;
-    bottom: 700px;
+    bottom: 37vw;
 }
 
 .chapterHeader .line1 {
