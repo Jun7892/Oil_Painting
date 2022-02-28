@@ -13,6 +13,13 @@ body{
     align-items: center;
     padding: 15vh 0;
 }
+
+p {
+    font-family: "CupheadVogue", sans-serif;
+    font-weight: 900;
+    color: #3e3b2a;
+    text-decoration: none;
+}
 .Logo{
     background: url('../img/logoMain.a263c77.png') 50%/contain no-repeat;
     width: 343px;
