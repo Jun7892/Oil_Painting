@@ -1,3 +1,38 @@
+function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    let csrftoken = getCookie('csrftoken');
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+
+    $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+
+
+
+
+
 function shiftLeft() {
     const boxes = document.querySelectorAll(".box");
     const tmpNode = boxes[0];
@@ -293,24 +328,24 @@ console.log('aaaa');
 
 $('.btn_open_chapter').on('click', () => {
 
-    var select = [];
+    let select = [];
 
     $("input[name=check]:checked").each(function(i){
         select.push($(this).val());
     });
+
     console.log(select)
-    let first_data = new FormData()
-    first_data.append('select', select)
+    // var first_data = new FormData();
+    // first_data.append('select', select);
 
      $.ajax({
-        url: '/main/oil',
-        type: 'GET',
-        data:
-            first_data,
-        datatype: 'json', // 서버에서 반환되는 데이터 json 형식
-        success: function(data){ // AJAX 통신이 성공하면 해당 과일의 영어 단어가 출려되도록
+        url: '/main/oil/',
+        type: 'POST',
+        data: JSON.stringify({'select':select}),
+         enctype: 'multipart/form-data',
+         datatype: 'json',
+        success: function(response){ // AJAX 통신이 성공하면 해당 과일의 영어 단어가 출려되도록
 
-            console.log(data.result)
             console.log("success")
         }
     });

@@ -18,9 +18,10 @@ def main_view(request):
     return render(request, 'testmain.html')
 
 def send_similarity(request):
-    select = request.GET.get('select')
+    select = json.loads(request.body.decode('utf-8'))
     print(select)
-    result = img_similarity(select)
+    print(select['select'])
+    result = img_similarity(select['select'])
     context = {'result' : result}
     return HttpResponse(json.dumps(context), content_type="application/json")
 
@@ -31,10 +32,10 @@ def img_similarity(select):
     path = "./static/oilpaintImg"
     # 해당 경로에 있는 모든 파일을 가지고 온다
     file_list = os.listdir(path)
-    print(file_list)
+
     # 해당 경로에 있는 모든 파일 중, .png 혹은 .jpeg 파일만 가지고 온다
     file_list_img = [file for file in file_list if file.endswith(".png") or file.endswith(".jpg")]
-
+    print(file_list_img)
 
 # 빈 데이터프레임을 하나 만들고,
     df = pd.DataFrame()
