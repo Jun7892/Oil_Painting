@@ -103,19 +103,28 @@ function modal(id) {
     // 닫기 버튼 처리, 시꺼먼 레이어와 모달 div 지우기
     modal.querySelector('.closeBtn').addEventListener('click', function () {
         bg.remove();
-        modal.style.display = 'none';
+        modal.classList.add('fadeout')
+        modal.classList.remove('fadein')
+        // modal.style.display = 'none';
         // .value = null; 이나 .empty() 2가지 방법으로 비우는 방법이 있어서 2가지 적용해놓음
         document.querySelector('#filename').value = null;
         $('#list').empty()
         $('#files').empty()
+        modal.setStyle({
+        opacity: 0,
+        pointerEvents:'none',
+    });
         // location.reload()
     });
-
+    // modal.style.pointerEvents = 'auto';
+    modal.classList.add('fadein')
+    modal.classList.remove('fadeout')
     modal.setStyle({
         position: 'fixed',
         display: 'block',
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-
+        opacity: 1,
+        pointerEvents:'auto',
         // 시꺼먼 레이어 보다 한칸 위에 보이기
         zIndex: zIndex + 1,
 
@@ -381,16 +390,16 @@ $('.btn_open_chapter').on('click', () => {
         contentType: false,
         enctype: 'multipart/form-data',
         success: function (response) {
-            alert('성공')
+            // alert('성공')
             console.log('성공')
         },
         error: function (request, status, error) {
-            alert('error')
+            // alert('error')
 
             console.log(request, status, error)
         },
         complete: function (response) {
-            alert('끝까지 실행완료')
+            // alert('끝까지 실행완료')
             console.log('끝까지 실행완료됨.')
 
             // 모달창에서 완성화면을 보여줘야함 이 부분 아직 안 만들음.
