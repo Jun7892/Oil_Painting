@@ -388,18 +388,20 @@ $('.btn_open_chapter').on('click', () => {
         cache: false,
         processData: false,
         contentType: false,
+        async:false,
         enctype: 'multipart/form-data',
         success: function (response) {
-            // alert('성공')
-            console.log('성공')
+            alert('성공')
+            console.log(response.file_url)
+
         },
         error: function (request, status, error) {
-            // alert('error')
+            alert('error')
 
             console.log(request, status, error)
         },
         complete: function (response) {
-            // alert('끝까지 실행완료')
+            alert('끝까지 실행완료')
             console.log('끝까지 실행완료됨.')
 
             // 모달창에서 완성화면을 보여줘야함 이 부분 아직 안 만들음.
