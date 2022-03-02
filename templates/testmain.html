@@ -5,6 +5,9 @@
     <script>var sound3 = "{% static "sounds/bgm.mp3" %}"</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
 {% endblock %}
 {% block title %}main{% endblock %}
 {% block content %}
@@ -187,7 +190,7 @@
                 <div class="line2"><span class="blurryText">Painted</span></div>
             </div>
 
-            <div id="modal_list">
+            <div id="modal_list" class="movie_list_scroll">
 {#                append 로 js 에서 유사도 처리 된것들을 리스트로 붙여줄 거임#}
             </div>
 

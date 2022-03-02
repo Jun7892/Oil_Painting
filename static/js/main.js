@@ -392,6 +392,7 @@ $('.btn_open_chapter').on('click', () => {
             console.log(response.file_url)
 
             let temp_list = response.file_url
+            print(temp_list)
             for (let i = 0; i < temp_list.length; i++) {
                 let temp_html = `<div class="listbox" style="border-radius: 5%;">
                     <img src=${temp_list[i]} class="listpicone" style="border-radius: 10%;">
@@ -399,6 +400,9 @@ $('.btn_open_chapter').on('click', () => {
                     <div class="edges edgeR"></div>
                     <p class="listname">${sorted_image[i]}</p>
                     <p class="listsim">Similarity Percent :  ${similarity_score[i]}%</p>
+                    <a href=${temp_list[i]} data-title="Expansion" data-lightbox="example-set"><img type="button" src="https://cdn-icons-png.flaticon.com/128/565/565787.png" style="width: 1vw; position: relative; top: -3.3vw; left: 19.85vw;" alt=""></a>
+                    <img type="button" onclick="(${temp_list[i]})" src="https://cdn-icons-png.flaticon.com/128/724/724933.png" style="width: 1vw; position: relative; top: -1.1vw; left: 18.70vw;" alt="">
+<!--                    <a style="display:none;" onclick="location.href=" href="https://opgg-com-image.akamaized.net/attach/images/20200725134328.953680.jpg" data-title="Download" data-lightbox="example-set"><img src="https://placekitten.com/100/99" alt=""></a>-->
                 </div>`
 
                 $('#modal_list').append(temp_html)
