@@ -64,6 +64,7 @@ p {
     align-items: center;
     justify-content: center;
     height: 25rem;
+    left: -10%;
 }
 
 .box {
@@ -1013,15 +1014,26 @@ svg {
     transition: fill .5s;
 }
 
+#modal_list {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 8vw;
+    right: 2rem;
+    overflow-x: hidden;
+    width: 30vw;
+    height: 25vw;
+}
+
 .listbox {
-    position: absolute;
-    top: 25%;
-    left: 12%;
+    position: relative;
+    left: 20%;
     /*background: url(../img/taskPreview.ab35210.png);*/
     /*background-size: cover;*/
     z-index: 5;
     width: 24vw;
     height: 5vw;
+    margin-top: 3vw;
 }
 
 .listpicone {
@@ -1041,6 +1053,7 @@ svg {
 .listsim {
     padding-top: 1%;
     padding-left: 25%;
+    padding-bottom: 3%;
 }
 
 .listbox2 {
@@ -1062,11 +1075,11 @@ svg {
 }
 
 .edges.edgeL {
-    left: 0;
+    left: 10%;
 }
 
 .edges {
-    width: 50%;
+    width: 40%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -1076,14 +1089,6 @@ svg {
 .edges.edgeR {
     left: 50%;
     transform: scaleX(-1);
-}
-
-.edges {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background: url(../img/taskPreview.ab35210.png) 0 0/auto 100% no-repeat;
 }
 
 
@@ -1173,7 +1178,7 @@ button:focus {
 #list .thumb {
   height: 20vw;
   border: 1px solid #323a44;
-  margin: -60px -52px;
+  margin-left: -2vw;
     /*들어간 사진을 사진 크기에 상관없이 가운데에 맞추고 싶은데 잘 모르겠음*/
 }
 
@@ -1237,3 +1242,4 @@ button:focus {
 .form input:valid + .label-name:after {
     transform: translateX(0%);
 }
+
