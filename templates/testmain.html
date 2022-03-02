@@ -4,7 +4,12 @@
     <link rel="stylesheet" href="{% static 'css/testmain.css' %}">
     <script>var sound3 = "{% static "sounds/bgm.mp3" %}"</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+{#    아래 세 줄은 어울리지 않는 한글폰트를 위해 구글폰트 적용#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
 {% endblock %}
 {% block title %}main{% endblock %}
 {% block content %}
@@ -33,20 +38,23 @@
             </div>
             <div class="cards-wrapper">
                 <ul class="cards__container">
+
+
+
                     <li class="box" style="background-color:red">
                         <div class="chapterCard">
                             <label class="card">
-                                <input class="card__input" value="paint1" name="check" type="checkbox"/>
+                                <input class="card__input" value="Jean_François_Millet" name="check" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="../static/img/paint1.jpg"/><span
+                                                                       src="../static/oilpaintImg/Jean%20François%20Millet.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
           </svg></span></div>
                                     <header class="card__body-header">
-                                        <h2 class="card__body-header-title">Category A</h2>
-                                        <p class="card__body-header-subtitle">Motorcycles</p>
+                                        <h2 class="card__body-header-title">이삭줍는 여인들</h2>
+                                        <p class="card__body-header-subtitle">Jean-François Millet</p>
                                     </header>
                                 </div>
                             </label>
@@ -55,17 +63,17 @@
                     <li class="box">
                         <div class="chapterCard">
                             <label class="card">
-                                <input class="card__input" value="paint2" name="check" type="checkbox"/>
+                                <input class="card__input" value="Claude_Monet" name="check" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="../static/img/paint2.jpg"/><span
+                                                                       src="../static/oilpaintImg/Claude Monet.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
           </svg></span></div>
                                     <header class="card__body-header">
-                                        <h2 class="card__body-header-title">Category B</h2>
-                                        <p class="card__body-header-subtitle">Cars and ATVs</p>
+                                        <h2 class="card__body-header-title">파라솔을 든 여인</h2>
+                                        <p class="card__body-header-subtitle">Claude Monet</p>
                                     </header>
                                 </div>
                             </label>
@@ -104,17 +112,17 @@
                     <li class="box">
                         <div class="chapterCard">
                             <label class="card">
-                                <input class="card__input" value="paint3" name="check" type="checkbox"/>
+                                <input class="card__input" value="Johannes_Vermeer" name="check" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="../static/img/paint3.jpg"/><span
+                                                                       src="../static/oilpaintImg/Johannes Vermeer.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
           </svg></span></div>
                                     <header class="card__body-header">
-                                        <h2 class="card__body-header-title">Category C</h2>
-                                        <p class="card__body-header-subtitle">Large goods vehicle</p>
+                                        <h2 class="card__body-header-title">진주 귀걸이를 한 소녀</h2>
+                                        <p class="card__body-header-subtitle">Johannes Vermeer</p>
                                     </header>
                                 </div>
                             </label>
@@ -123,41 +131,158 @@
                     <li class="box">
                         <div class="chapterCard">
                             <label class="card">
-                                <input class="card__input" value="paint4" name="check" type="checkbox"/>
+                                <input class="card__input" value="Leonardo_da_Vinci" name="check" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="../static/img/paint4.jpg"/><span
+                                                                       src="../static/oilpaintImg/Leonardo da Vinci.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
           </svg></span></div>
                                     <header class="card__body-header">
-                                        <h2 class="card__body-header-title">Category D</h2>
-                                        <p class="card__body-header-subtitle">Buses</p>
+                                        <h2 class="card__body-header-title">모나리자</h2>
+                                        <p class="card__body-header-subtitle">Leonardo da Vinci</p>
                                     </header>
                                 </div>
                             </label>
                         </div>
                     </li>
-                    <li class="box  box--hide">
+
+                    <li class="box box--hide">
                         <div class="chapterCard">
                             <label class="card">
-                                <input class="card__input" value="paint5" type="checkbox"/>
+                                <input class="card__input" value="이중섭" name="check" type="checkbox"/>
                                 <div class="card__body">
                                     <div class="card__body-cover"><img class="card__body-cover-image"
-                                                                       src="../static/img/paint8.jpg"/><span
+                                                                       src="../static/oilpaintImg/이중섭.jpg"/><span
                                             class="card__body-cover-checkbox">
           <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
           </svg></span></div>
                                     <header class="card__body-header">
-                                        <h2 class="card__body-header-title">Category T</h2>
-                                        <p class="card__body-header-subtitle">Tractors and SMV</p>
+                                        <h2 class="card__body-header-title">소</h2>
+                                        <p class="card__body-header-subtitle">이중섭</p>
                                     </header>
                                 </div>
                             </label>
                         </div>
                     </li>
+                    <li class="box box--hide">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" value="Vincent_van_Gogh" name="check" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="../static/oilpaintImg/Vincent van Gogh.jpg"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">별이 빛나는 밤</h2>
+                                        <p class="card__body-header-subtitle">Vincent van Gogh</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+
+                    <li class="box box--hide">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" value="Sandro Botticelli" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="../static/oilpaintImg/Sandro Botticelli.jpg"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">비너스의 탄생</h2>
+                                        <p class="card__body-header-subtitle">Sandro Botticelli</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="box box--hide">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" value="Michelangelo_Buonarroti" name="check" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="../static/oilpaintImg/Michelangelo Buonarroti.jpg"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">천지창조</h2>
+                                        <p class="card__body-header-subtitle">Michelangelo Buonarroti</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="box box--hide">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" value="Pablo_Picasso" name="check" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="../static/oilpaintImg/Pablo Picasso.jpg"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">우는 여자</h2>
+                                        <p class="card__body-header-subtitle">Pablo Picasso.jpg</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="box box--hide">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" value="Edvard_Munch" name="check" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="../static/oilpaintImg/Edvard Munch.jpg"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">절 규</h2>
+                                        <p class="card__body-header-subtitle">Edvard Munch</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="box box--hide">
+                        <div class="chapterCard">
+                            <label class="card">
+                                <input class="card__input" value="Diego_Velazquez" name="check" type="checkbox"/>
+                                <div class="card__body">
+                                    <div class="card__body-cover"><img class="card__body-cover-image"
+                                                                       src="../static/oilpaintImg/Diego Velazquez.jpg"/><span
+                                            class="card__body-cover-checkbox">
+          <svg class="card__body-cover-checkbox--svg" viewBox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg></span></div>
+                                    <header class="card__body-header">
+                                        <h2 class="card__body-header-title">시녀들</h2>
+                                        <p class="card__body-header-subtitle">Diego Velazquez</p>
+                                    </header>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+
 
                 </ul>
             </div>
