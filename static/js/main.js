@@ -330,9 +330,16 @@ function charm3(sound3) {
 //             })
 // });
 //
+async function loading_show() {
+    $('#canvas').show();
+}
 
 
 $('.btn_open_chapter').on('click', () => {
+    // function sleep (delay) { var start = new Date().getTime();
+    //     while (new Date().getTime() < start + delay); }
+    loading_show();
+
 
     let select = [];
     var sorted_image = [];
@@ -345,6 +352,7 @@ $('.btn_open_chapter').on('click', () => {
     console.log(select)
     // var first_data = new FormData();
     // first_data.append('select', select);
+
 
     $.ajax({
         url: '/main/oil/',
@@ -385,14 +393,12 @@ $('.btn_open_chapter').on('click', () => {
         cache: false,
         processData: false,
         contentType: false,
-        async: false,
+        // async: false,
         enctype: 'multipart/form-data',
         success: function (response) {
-            alert('성공')
             console.log(response.file_url)
 
             let temp_list = response.file_url
-            print(temp_list)
             for (let i = 0; i < temp_list.length; i++) {
                 let temp_html = `<div class="listbox" style="border-radius: 5%;">
                     <img src=${temp_list[i]} class="listpicone" style="border-radius: 10%;">
@@ -400,9 +406,6 @@ $('.btn_open_chapter').on('click', () => {
                     <div class="edges edgeR"></div>
                     <p class="listname">${sorted_image[i]}</p>
                     <p class="listsim">Similarity Percent :  ${similarity_score[i]}%</p>
-                    <a href=${temp_list[i]} data-title="Expansion" data-lightbox="example-set"><img type="button" src="https://cdn-icons-png.flaticon.com/128/565/565787.png" style="width: 1vw; position: relative; top: -3.3vw; left: 19.85vw;" alt=""></a>
-                    <img type="button" onclick="(${temp_list[i]})" src="https://cdn-icons-png.flaticon.com/128/724/724933.png" style="width: 1vw; position: relative; top: -1.1vw; left: 18.70vw;" alt="">
-<!--                    <a style="display:none;" onclick="location.href=" href="https://opgg-com-image.akamaized.net/attach/images/20200725134328.953680.jpg" data-title="Download" data-lightbox="example-set"><img src="https://placekitten.com/100/99" alt=""></a>-->
                 </div>`
 
                 $('#modal_list').append(temp_html)
@@ -415,8 +418,11 @@ $('.btn_open_chapter').on('click', () => {
         }
         ,
         complete: function (response) {
-            alert('끝까지 실행완료')
+        $('#canvas').hide();
+
             console.log('끝까지 실행완료됨.')
+
+
 
             // 모달창에서 완성화면을 보여줘야함 이 부분 아직 안 만들음.
 
@@ -424,3 +430,77 @@ $('.btn_open_chapter').on('click', () => {
     })
     ;
 })
+
+            setTimeout((
+    ) => {console.log("첫 번째 메시지")}, 3000);
+
+setTimeout(() => {console.log("두 번째 메시지")}, 1000);
+
+// $(document).ajaxStart(function() {
+//
+//     //마우스 커서를 로딩 중 커서로 변경 $('html').css("cursor", "wait");
+// });
+
+//로딩바
+            function changePet() {
+                const animalArray = [
+                    '🐱',
+                    '🐶',
+                    '🐰',
+                    '🦊',
+                    '🐷',
+                    '🐹',
+                    '🦁',
+                    '🐸',
+                    '🐯',
+                    '🦄',
+                    '🐻',
+                    '🐵'];
+
+                const hasSunniesArray = [
+                    '🐱',
+                    '🐶',
+                    '🐰',
+                    '🦊',
+                    '🐹',
+                    '🐯',
+                    '🐻',
+                    '🐵'];
+
+                const pet = document.querySelector('.pet');
+
+                const arrayIndex = animalArray.findIndex(animal => animal === pet.innerHTML);
+                const lastArrayIndex = animalArray.length - 1;
+                /* TIL — with Array.prototype.reduce() I could find the last item in my array: animalArray.reduce((acc, curr) => curr, null); */
+
+                const newPet = arrayIndex === lastArrayIndex ? animalArray[0] : animalArray[arrayIndex + 1];
+
+                const sunnies = document.querySelector('.pet-sunnies');
+                const petHasSunnies = hasSunniesArray.find(animal => animal === newPet);
+                if (typeof petHasSunnies === 'undefined') {
+                    sunnies.style.opacity = '0';
+                } else {
+                    sunnies.style.opacity = '1';
+                }
+
+                pet.innerHTML = newPet;
+            }
+
+            const canvas = document.querySelector('.canvas');
+            canvas.addEventListener('click', changePet, false);
+
+//
+// <img type="button" src="https://cdn-icons-png.flaticon.com/128/565/565787.png"
+//      style="width: 1vw; position: relative; top: -3.3vw; left: 19.85vw;" alt="">
+//     <img type="button" onClick="(${temp_list[i]})" src="https://cdn-icons-png.flaticon.com/128/724/724933.png"
+//          style="width: 1vw; position: relative; top: -1.1vw; left: 18.70vw;" alt="">
+//         <a href=${temp_list[i]} data-title="Expansion" data-lightbox="example-set"></a>
+
+// 석준님 다운로드 링크 및 이미지 크게보기 아이콘
+// <a data-title="Expansion" data-lightbox="example-set"><img src="https://cdn-icons-png.flaticon.com/128/565/565787.png"
+//                                                            style="width: 1vw; position: relative; top: -3.3vw; left: 19.85vw;"
+//                                                            alt=""></a>
+// <a href=${temp_list[i]} data-title="Download" data-lightbox="example-set"><img type="button" onClick="(${temp_list[i]})"
+//                                                                                src="https://cdn-icons-png.flaticon.com/128/724/724933.png"
+//                                                                                style="width: 1vw; position: relative; top: -1.1vw; left: 18.70vw;"
+//                                                                                alt=""></a>
