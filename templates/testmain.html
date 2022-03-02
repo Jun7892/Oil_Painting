@@ -5,9 +5,6 @@
     <script>var sound3 = "{% static "sounds/bgm.mp3" %}"</script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
 {% endblock %}
 {% block title %}main{% endblock %}
 {% block content %}
@@ -191,7 +188,7 @@
             </div>
 
             <div id="modal_list" class="movie_list_scroll">
-{#                append 로 js 에서 유사도 처리 된것들을 리스트로 붙여줄 거임#}
+                {#                append 로 js 에서 유사도 처리 된것들을 리스트로 붙여줄 거임#}
             </div>
 
 
@@ -203,14 +200,25 @@
 
         </div>
 
+        <div id="canvas" class="canvas p-flex p-overflow-h">
+            <div class="loader p-circle p-flex">
+                <div class="loader__spinner p-circle p-overflow-h">
+                    <div class="spinner spinner--01"></div>
+                    <div class="spinner spinner--02"></div>
+                    <div class="spinner spinner--03"></div>
+                    <div class="spinner spinner--04"></div>
+                </div>
+                <div class="loader__pet-bg p-flex p-circle p-overflow-h"><span class="pet">🐱</span><span
+                        class="pet-sunnies">🕶</span></div>
+            </div>
+        </div>
 
         <div id="bottomEarth">
-
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    <script defer type="text/javascript" src="{% static 'js/main.js' %}"></script>
 {% endblock %}

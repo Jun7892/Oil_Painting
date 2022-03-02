@@ -72,6 +72,7 @@ def img_similarity(select):
 
     total_fruit_count = Counter()
 
+
     for i in range(len(similarity)):
         fruit_count = Counter(similarity[i])
     # second_basket_fruit_count = Counter(similarity[1])
@@ -79,5 +80,7 @@ def img_similarity(select):
     print(dict(total_fruit_count))
 
     dictionary = dict(total_fruit_count)
+    for key, value in dictionary.items():
+        dictionary[key] = round(dictionary[key]/len(select),1)
     total = sorted(dictionary.items(), key=lambda x: x[1], reverse=True)
     return(total)
