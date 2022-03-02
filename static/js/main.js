@@ -1,36 +1,33 @@
 function getCookie(name) {
-        var cookieValue = null;
-        if (document.cookie && document.cookie !== '') {
-            var cookies = document.cookie.split(';');
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i].trim();
-                // Does this cookie string begin with the name we want?
-                if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                }
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
             }
         }
-        return cookieValue;
     }
+    return cookieValue;
+}
 
-    let csrftoken = getCookie('csrftoken');
+let csrftoken = getCookie('csrftoken');
 
-    function csrfSafeMethod(method) {
-        // these HTTP methods do not require CSRF protection
-        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-    }
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
 
-    $.ajaxSetup({
-        beforeSend: function (xhr, settings) {
-            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-                xhr.setRequestHeader("X-CSRFToken", csrftoken);
-            }
+$.ajaxSetup({
+    beforeSend: function (xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
         }
-    });
-
-
-
+    }
+});
 
 
 function shiftLeft() {
@@ -86,6 +83,7 @@ function modal(id) {
     let modal = document.getElementById(id);
 
     // 모달 div 뒤에 희끄무레한 레이어
+
     var bg = document.createElement('div');
     bg.setStyle({
         position: 'fixed',
@@ -111,9 +109,9 @@ function modal(id) {
         $('#list').empty()
         $('#files').empty()
         modal.setStyle({
-        opacity: 0,
-        pointerEvents:'none',
-    });
+            opacity: 0,
+            pointerEvents: 'none',
+        });
         // location.reload()
     });
     // modal.style.pointerEvents = 'auto';
@@ -121,15 +119,15 @@ function modal(id) {
     modal.classList.remove('fadeout')
     modal.setStyle({
         position: 'fixed',
+        overflow: 'hidden',
         display: 'block',
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
         opacity: 1,
-        pointerEvents:'auto',
+        pointerEvents: 'auto',
         // 시꺼먼 레이어 보다 한칸 위에 보이기
         zIndex: zIndex + 1,
-
         // div center 정렬
-        top: '58%',
+        top: '55%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         msTransform: 'translate(-50%, -50%)',
@@ -259,6 +257,7 @@ $('#files').change(handleFileSelect);
 
 let isPlaying = false;
 let audio = document.getElementById("myAudio");
+
 function charm3(sound3) {
 
     // let audio = new Audio(sound3);
@@ -267,16 +266,14 @@ function charm3(sound3) {
     isPlaying ? audio.pause() : audio.play();
 
 
-audio.onplaying = function () {
-    isPlaying = true;
-};
-audio.onpause = function () {
-    isPlaying = false;
-};
-console.log('aaaa');
+    audio.onplaying = function () {
+        isPlaying = true;
+    };
+    audio.onpause = function () {
+        isPlaying = false;
+    };
+    console.log('aaaa');
 }
-
-
 
 
 // ajax통신
@@ -287,23 +284,23 @@ console.log('aaaa');
 //             console.log(img)
 //             console.log(key)
 
-            // var file = files[0];
+// var file = files[0];
 
-            // let testset = new FormData();
+// let testset = new FormData();
 
-            // testset.append('file', file);
-            // testset.append('img', img);
-            // testset.append('key', key);
+// testset.append('file', file);
+// testset.append('img', img);
+// testset.append('key', key);
 
-            // console.log(testset)
-            // if (img.length <= 0) {
-            //     alert('이미지를 넣어주세요')
-            // } else if (key.length <= 0) {
-            //     alert('파일 이름을 입력해주세요.')
-            // } else {
-            //     sendimage(testset);
-            //     console.log(files[0])
-            // }
+// console.log(testset)
+// if (img.length <= 0) {
+//     alert('이미지를 넣어주세요')
+// } else if (key.length <= 0) {
+//     alert('파일 이름을 입력해주세요.')
+// } else {
+//     sendimage(testset);
+//     console.log(files[0])
+// }
 
 //
 //             $.ajax({
@@ -341,7 +338,7 @@ $('.btn_open_chapter').on('click', () => {
     var sorted_image = [];
     var similarity_score = [];
 
-    $("input[name=check]:checked").each(function(i){
+    $("input[name=check]:checked").each(function (i) {
         select.push($(this).val());
     });
 
@@ -349,16 +346,16 @@ $('.btn_open_chapter').on('click', () => {
     // var first_data = new FormData();
     // first_data.append('select', select);
 
-     $.ajax({
+    $.ajax({
         url: '/main/oil/',
         type: 'POST',
-        data: JSON.stringify({'select':select}),
-         enctype: 'multipart/form-data',
-         async: false,
-         datatype: 'json',
-        success: function(data){ // AJAX 통신이 성공하면 해당 과일의 영어 단어가 출려되도록
+        data: JSON.stringify({'select': select}),
+        enctype: 'multipart/form-data',
+        async: false,
+        datatype: 'json',
+        success: function (data) { // AJAX 통신이 성공하면 해당 과일의 영어 단어가 출려되도록
             let result = data.result;
-            for (let i=0; i < result.length; i++){
+            for (let i = 0; i < result.length; i++) {
                 sorted_image.push(result[i][0]);
                 similarity_score.push(result[i][1]);
             }
@@ -388,18 +385,31 @@ $('.btn_open_chapter').on('click', () => {
         cache: false,
         processData: false,
         contentType: false,
-        async:false,
+        async: false,
         enctype: 'multipart/form-data',
         success: function (response) {
             alert('성공')
             console.log(response.file_url)
 
+            let temp_list = response.file_url
+            for (let i = 0; i < temp_list.length; i++) {
+                let temp_html = `<div class="listbox" style="border-radius: 5%;">
+                    <img src=${temp_list[i]} class="listpicone" style="border-radius: 10%;">
+                    <div class="edges edgeL"></div>
+                    <div class="edges edgeR"></div>
+                    <p class="listname">${sorted_image[i]}</p>
+                    <p class="listsim">Similarity Percent :  ${similarity_score[i]}%</p>
+                </div>`
+
+                $('#modal_list').append(temp_html)
+            }
         },
         error: function (request, status, error) {
             alert('error')
 
             console.log(request, status, error)
-        },
+        }
+        ,
         complete: function (response) {
             alert('끝까지 실행완료')
             console.log('끝까지 실행완료됨.')
@@ -407,5 +417,6 @@ $('.btn_open_chapter').on('click', () => {
             // 모달창에서 완성화면을 보여줘야함 이 부분 아직 안 만들음.
 
         }
-    });
+    })
+    ;
 })
