@@ -105,3 +105,5 @@
 ### 📌[Figma](https://www.figma.com/file/dc1SEG83znvUNv2CJOVAo2/Oil-Paint?node-id=0%3A1)
 
 ### 📌AWS EC2 업로드 / [Link]
+
+### 📌[KPT](https://jamboard.google.com/d/1IyKHFlBMyJ7VAQ2u4afiLwzmQGSUp9VvmlTLPY2WfpQ/viewer?f=2)
