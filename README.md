@@ -1,6 +1,6 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fseongolee%2F17team_netflix_clone&count_bg=%2349E3D8&title_bg=%23555555&icon=github.svg&icon_color=%23CFDD4F&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
  # 17team 3!4!
-이성오 김지용 김석준 윤소현
+김지용 김석준 윤소현
 
 ## 내일배움캠프 유화제작 서비스 Clone 프로젝트
 
@@ -32,22 +32,22 @@
 ### **🧙 맴버구성**
 
 - 💄 Frontend
-    - 이성오  김석준 윤소현
-- 💻 Backend
-    - 이성오 김지용
+    - 김석준 윤소현 김지용
+- 💻 Backend
+    - 윤소현 김지용 김석준
 - 😎 Design
-    - 김지용 김석준 이성오 윤소현
+    - 김지용 김석준 윤소현
 
 
 ## 🔧 기술스택
 
-**✔**사용언어 및 프레임워크 및 기능 : HTML, JavaScript(ES6+), Ajax, Python, PythonDjango  Bootstrap
+**✔**사용언어 및 프레임워크 및 기능 : HTML, JavaScript(ES6+), Ajax, Python, PythonDjango
 
 **✔**사용기술 백엔드 언어: HTML, JavaScript(ES6+), Python
 
-**✔**라이브러리 : bs4  requests jsonify tensorflow
+**✔**라이브러리 : jsonify tensorflow
 
-**✔**데이터베이스: AWS S3, RDS, ORM
+**✔**데이터베이스: AWS S3
 
 **✔**프로젝트 관리도구: Sourcetree
 
@@ -55,7 +55,7 @@
 
 **✔**개발툴: PyCharm, VScode
 
-**✔**Common : Git, Github, Slack, Notion, Figma, Google_Spread_Sheet
+**✔**Common : Git, Github, Slack, Notion, Figma
 
 <!-- ### 📌 기술 선택 이유! - <a href="https://github.com/seongolee/17team_netflix_clone/wiki" >상세보기 - WIKI 이동</a> -->
 
@@ -94,11 +94,8 @@
 
 **✔** AI
 
-    aaa
-
-    bbb
-    
-    ccc
+- 이미지 유사도 리스트 사용 / sklearn의 cosine_similarity 함수 사용
+- NST 인공지능 서버 
 
 
 
