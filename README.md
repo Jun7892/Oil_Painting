@@ -100,7 +100,7 @@
 
 
 ### 📌 끈기와 집념! 문제해결!
-##### 안되면 될때까지!! - <a href="https://github.com/seongolee/17team_netflix_clone/wiki/%EC%8B%9C%ED%96%89%EC%B0%A9%EC%98%A4!" >상세보기 - WIKI 이동</a>
+##### 안되면 될때까지!! - <a href="https://github.com/Jun7892/Oil/wiki/%EC%95%88-%EB%90%98%EB%A9%B4-%EB%90%A0%EB%95%8C%EA%B9%8C%EC%A7%80!!!" >상세보기 - WIKI 이동</a>
 
 ### 📌[Figma](https://www.figma.com/file/dc1SEG83znvUNv2CJOVAo2/Oil-Paint?node-id=0%3A1)
 
