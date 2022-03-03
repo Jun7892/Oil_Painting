@@ -426,7 +426,7 @@ $('.btn_open_chapter').on('click', () => {
         },
         error: function (request, status, error) {
             alert('error')
-
+            console.log(form_data)
             console.log(request, status, error)
         }
         ,
