@@ -40,7 +40,7 @@ function charm3(sound3) {
 //         audio.muted;
 //         count += 1
 //     }
-// } 
+// }  
 
 
 // 버튼 클릭시 display: flex 값 / 닫기 버튼 클릭시 modal display none 값
